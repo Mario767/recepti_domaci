@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "typeRoots": ["node_modules/@types", "node_modules/@nuxt"],
+    "allowSyntheticDefaultImports": true,
+    // ...
+  }
+  // ...
+}
