@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Predjela/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div id=\"app\">\n    <CardRecepti :recepti=\"recepti ? recepti.data : []\" />\n    <div class=\"pagination\">\n      <button class=\"pagination-button\" v-if=\"recepti && recepti.current_page > 1\" @click=\"fetchData(recepti.current_page - 1)\">Previous</button>\n      <button class=\"pagination-button\" v-if=\"recepti && recepti.last_page > recepti.current_page\" @click=\"fetchData(recepti.current_page + 1)\">Next</button>\n    </div>\n    <p v-if=\"error\">{{ error }}</p>\n  </div>\n</template>\n\n<script>\nimport axios from 'axios';\nimport CardRecepti from '@/components/CardRecepti.vue';\n\nexport default {\n  components: {\n    CardRecepti\n  },\n  data() {\n    return {\n      recepti: null,\n      error: null\n    };\n  },\n  mounted() {\n    this.fetchData(1);\n  },\n  methods: {\n    fetchData(page) {\n      axios.get(`http://127.0.0.1:8000/api/dohvatipredjelo?page=${page}`)\n        .then(response => {\n          this.recepti = response.data.recepti;\n        })\n        .catch(error => {\n          this.error = 'Došlo je do greške prilikom dohvata recepata: ' + error.message;\n        });\n    }\n  }\n};\n</script>\n\n<style scoped>\n.pagination {\n  display: flex;\n  justify-content: center;\n}\n\n.pagination-button {\n  color: white;\n  background-color: #FF6347;\n  border: none;\n  padding: 0.7rem;\n  border-radius: 10%;\n}\n</style>\n",
+      "start": 1719309404255,
+      "end": 1719309404506,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309404506,
+      "end": 1719309404506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport axios from 'axios';\nimport CardRecepti from '@/components/CardRecepti.vue';\n\nconst _sfc_main = {\n  components: {\n    CardRecepti\n  },\n  data() {\n    return {\n      recepti: null,\n      error: null\n    };\n  },\n  mounted() {\n    this.fetchData(1);\n  },\n  methods: {\n    fetchData(page) {\n      axios.get(`http://127.0.0.1:8000/api/dohvatipredjelo?page=${page}`)\n        .then(response => {\n          this.recepti = response.data.recepti;\n        })\n        .catch(error => {\n          this.error = 'Došlo je do greške prilikom dohvata recepata: ' + error.message;\n        });\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-791d373a\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { id: \"app\" }\nconst _hoisted_2 = { class: \"pagination\" }\nconst _hoisted_3 = { key: 0 }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_CardRecepti = _resolveComponent(\"CardRecepti\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_CardRecepti, {\n      recepti: $data.recepti ? $data.recepti.data : []\n    }, null, 8, [\"recepti\"]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      ($data.recepti && $data.recepti.current_page > 1)\n        ? (_openBlock(), _createElementBlock(\"button\", {\n            key: 0,\n            class: \"pagination-button\",\n            onClick: _cache[0] || (_cache[0] = $event => ($options.fetchData($data.recepti.current_page - 1)))\n          }, \"Previous\"))\n        : _createCommentVNode(\"\", true),\n      ($data.recepti && $data.recepti.last_page > $data.recepti.current_page)\n        ? (_openBlock(), _createElementBlock(\"button\", {\n            key: 1,\n            class: \"pagination-button\",\n            onClick: _cache[1] || (_cache[1] = $event => ($options.fetchData($data.recepti.current_page + 1)))\n          }, \"Next\"))\n        : _createCommentVNode(\"\", true)\n    ]),\n    ($data.error)\n      ? (_openBlock(), _createElementBlock(\"p\", _hoisted_3, _toDisplayString($data.error), 1))\n      : _createCommentVNode(\"\", true)\n  ]))\n}\n\nimport \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Predjela/index.vue?vue&type=style&index=0&scoped=791d373a&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-791d373a\"]])",
+      "start": 1719309404506,
+      "end": 1719309404508,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309404508,
+      "end": 1719309404508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309404509,
+      "end": 1719309404509,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309404509,
+      "end": 1719309404509,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309404509,
+      "end": 1719309404509,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309404509,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/CardRecepti.vue\";\n\nimport axios from 'axios';\nimport CardRecepti from '@/components/CardRecepti.vue';\n\nconst _sfc_main = {\n  components: {\n    CardRecepti\n  },\n  data() {\n    return {\n      recepti: null,\n      error: null\n    };\n  },\n  mounted() {\n    this.fetchData(1);\n  },\n  methods: {\n    fetchData(page) {\n      axios.get(`http://127.0.0.1:8000/api/dohvatipredjelo?page=${page}`)\n        .then(response => {\n          this.recepti = response.data.recepti;\n        })\n        .catch(error => {\n          this.error = 'Došlo je do greške prilikom dohvata recepata: ' + error.message;\n        });\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-791d373a\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { id: \"app\" }\nconst _hoisted_2 = { class: \"pagination\" }\nconst _hoisted_3 = { key: 0 }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_CardRecepti = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createVNode(_component_CardRecepti, {\n      recepti: $data.recepti ? $data.recepti.data : []\n    }, null, 8, [\"recepti\"]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      ($data.recepti && $data.recepti.current_page > 1)\n        ? (_openBlock(), _createElementBlock(\"button\", {\n            key: 0,\n            class: \"pagination-button\",\n            onClick: _cache[0] || (_cache[0] = $event => ($options.fetchData($data.recepti.current_page - 1)))\n          }, \"Previous\"))\n        : _createCommentVNode(\"\", true),\n      ($data.recepti && $data.recepti.last_page > $data.recepti.current_page)\n        ? (_openBlock(), _createElementBlock(\"button\", {\n            key: 1,\n            class: \"pagination-button\",\n            onClick: _cache[1] || (_cache[1] = $event => ($options.fetchData($data.recepti.current_page + 1)))\n          }, \"Next\"))\n        : _createCommentVNode(\"\", true)\n    ]),\n    ($data.error)\n      ? (_openBlock(), _createElementBlock(\"p\", _hoisted_3, _toDisplayString($data.error), 1))\n      : _createCommentVNode(\"\", true)\n  ]))\n}\n\nimport \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Predjela/index.vue?vue&type=style&index=0&scoped=791d373a&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-791d373a\"]])",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309404510,
+      "end": 1719309404510,
+      "order": "normal"
+    }
+  ]
+}

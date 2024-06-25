@@ -1,0 +1,294 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue?vue&type=style&index=0&scoped=e23555b8&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n#app {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 2rem;\n}\n\n.title {\n  font-size: 2rem;\n  font-weight: bold;\n  color: tomato;\n  margin-bottom: 1rem;\n}\n\n.form-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 600px;\n}\n\n.form-group {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n}\n\ninput[type=\"text\"],\ntextarea,\nbutton[type=\"submit\"],\n.v-combobox {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n.v-combobox .v-input__control {\n  width: 100%;\n}\n\nbutton[type=\"submit\"] {\n  background-color: #FF6347;\n  color: white;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n  padding: 0.65rem 1rem; /* Adjusted padding */\n  align-self: center;\n  max-width: 200px; /* Maximalna širina dugmeta */\n  width: 100%; /* Da se dugme prilagodi roditeljskom kontejneru */\n  box-sizing: border-box; /* Da padding ne utječe na ukupnu širinu */\n}\n\n\nbutton[type=\"submit\"]:hover {\n  background-color: #ff1b3d;\n}\n\n.error-message {\n  color: red;\n}\n\n@media (max-width: 1200px) {\n  .form-container {\n    max-width: 80%;\n  }\n}\n\n@media (max-width: 992px) {\n  .form-container {\n    max-width: 90%;\n  }\n}\n\n@media (max-width: 768px) {\n  .form-container {\n    max-width: 95%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.875rem;\n    padding: 0.4rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .form-container {\n    max-width: 100%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.75rem;\n    padding: 0.3rem;\n  }\n}\n",
+      "start": 1719309440545,
+      "end": 1719309440545,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div id=\"app\">\n    <h2 class=\"title\">Uredi recept</h2>\n    <form @submit.prevent=\"submitForm\" class=\"form-container\">\n      <div class=\"form-group\">\n        <label for=\"naziv_recepta\">Naziv recepta:</label>\n        <input type=\"text\" id=\"naziv_recepta\" v-model=\"nazivRecepta\" maxlength=\"60\" required>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"opis\">Opis:</label>\n        <textarea id=\"opis\" v-model=\"opis\" maxlength=\"1000\" required></textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"slika\">Slika:</label>\n        <input type=\"file\" id=\"slika\" @change=\"handleFileUpload\" accept=\"image/*\">\n        <span v-if=\"slikaTooLarge\" class=\"error-message\">Slika je prevelika (max 5 MB)</span>\n        <span v-if=\"slikaInvalidFormat\" class=\"error-message\">Neispravan format slike</span>\n      </div>\n      <div class=\"form-group\">\n        <v-combobox\n          label=\"Vrsta jela\"\n          v-model=\"vrstaJela\"\n          :items=\"['Glavno jelo', 'Predjelo', 'Desert']\"\n          required\n        ></v-combobox>\n      </div>\n      <button type=\"submit\" :disabled=\"slikaTooLarge || slikaInvalidFormat\">Spremi recept</button>\n    </form>\n  </div>\n</template>\n\n<script>\nimport axios from 'axios';\nimport accountStore from '@/composables/accountStore';\n\ndefinePageMeta({\n  layout: ''\n});\n\nexport default {\n  data() {\n    return {\n      originalRecept: null,\n      nazivRecepta: '',\n      opis: '',\n      slika: null,\n      vrstaJela: null,\n      slikaTooLarge: false,\n      slikaInvalidFormat: false\n    };\n  },\n  methods: {\n    handleFileUpload(event) {\n      const file = event.target.files[0];\n      const maxSize = 5 * 1024 * 1024; // 5 MB limit\n      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp']; // Allowed image types\n      if (!file) return;\n\n      if (file.size > maxSize) {\n        this.slikaTooLarge = true;\n        this.slikaInvalidFormat = false;\n        return;\n      }\n\n      if (!allowedTypes.includes(file.type)) {\n        this.slikaInvalidFormat = true;\n        this.slikaTooLarge = false;\n        return;\n      }\n\n      this.slikaTooLarge = false;\n      this.slikaInvalidFormat = false;\n      this.slika = file;\n    },\n    submitForm() {\n      if (this.originalRecept.nazivRecepta === this.nazivRecepta &&\n        this.originalRecept.opis === this.opis &&\n        this.originalRecept.vrstaJela === this.vrstaJela &&\n        !this.slika) {\n        this.$router.go(-1);\n        return;\n      }\n\n      const formData = new FormData();\n      formData.append('recept_id', accountStore.state.receptId);\n      formData.append('naziv_recepta', this.nazivRecepta);\n      formData.append('opis', this.opis);\n      if (this.slika) {\n        formData.append('slika', this.slika);\n      }\n      formData.append('vrstajela', this.vrstaJela);\n\n      const authToken = document.cookie.replace(/(?:(?:^|.*;\\s*)authToken\\s*=\\s*([^;]*).*$)|^.*$/, \"$1\");\n\n      axios.post('http://localhost:8000/api/updaterec', formData, {\n          headers: {\n            'Content-Type': 'multipart/form-data',\n            'Authorization': `Bearer ${authToken}`\n          }\n        })\n        .then(() => {\n          this.$router.go(-1);\n        })\n        .catch(error => {\n          console.error('Došlo je do greške prilikom spremanja recepta:', error);\n        });\n    },\n    getReceptData(id_recepta) {\n      axios.get(`http://127.0.0.1:8000/api/dohvatirec/${id_recepta}`)\n        .then(response => {\n          this.originalRecept = response.data;\n          this.nazivRecepta = response.data.naziv_recepta;\n          this.opis = response.data.opis;\n          this.vrstaJela = response.data.vrstajela;\n        })\n        .catch(error => {\n          console.error('Došlo je do greške prilikom dohvaćanja recepta:', error);\n        });\n    }\n  },\n  created() {\n    let receptId = accountStore.state.receptId;\n    if (typeof sessionStorage !== 'undefined') {\n      receptId = receptId || sessionStorage.getItem('receptId');\n    }\n    this.getReceptData(receptId);\n  }\n};\n</script>\n\n<style scoped>\n#app {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 2rem;\n}\n\n.title {\n  font-size: 2rem;\n  font-weight: bold;\n  color: tomato;\n  margin-bottom: 1rem;\n}\n\n.form-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 600px;\n}\n\n.form-group {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n}\n\ninput[type=\"text\"],\ntextarea,\nbutton[type=\"submit\"],\n.v-combobox {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n.v-combobox .v-input__control {\n  width: 100%;\n}\n\nbutton[type=\"submit\"] {\n  background-color: #FF6347;\n  color: white;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n  padding: 0.65rem 1rem; /* Adjusted padding */\n  align-self: center;\n  max-width: 200px; /* Maximalna širina dugmeta */\n  width: 100%; /* Da se dugme prilagodi roditeljskom kontejneru */\n  box-sizing: border-box; /* Da padding ne utječe na ukupnu širinu */\n}\n\n\nbutton[type=\"submit\"]:hover {\n  background-color: #ff1b3d;\n}\n\n.error-message {\n  color: red;\n}\n\n@media (max-width: 1200px) {\n  .form-container {\n    max-width: 80%;\n  }\n}\n\n@media (max-width: 992px) {\n  .form-container {\n    max-width: 90%;\n  }\n}\n\n@media (max-width: 768px) {\n  .form-container {\n    max-width: 95%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.875rem;\n    padding: 0.4rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .form-container {\n    max-width: 100%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.75rem;\n    padding: 0.3rem;\n  }\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309440549,
+      "end": 1719309440550,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309440549,
+      "end": 1719309440550,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309440554,
+      "end": 1719309440555,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309440554,
+      "end": 1719309440555,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309440555,
+      "end": 1719309440555,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "#app{align-items:center;display:flex;flex-direction:column;padding:2rem}.title{color:tomato;font-size:2rem;font-weight:700;margin-bottom:1rem}.form-container{display:flex;flex-direction:column;max-width:600px;width:100%}.form-group{margin-bottom:1rem}label{display:block;margin-bottom:.5rem}.v-combobox,button[type=submit],input[type=text],textarea{border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:1rem;padding:.5rem;width:100%}.v-combobox .v-input__control{width:100%}button[type=submit]{align-self:center;background-color:tomato;border:none;box-sizing:border-box;color:#fff;cursor:pointer;max-width:200px;padding:.65rem 1rem;transition:background-color .3s;width:100%}button[type=submit]:hover{background-color:#ff1b3d}.error-message{color:red}@media (max-width:1200px){.form-container{max-width:80%}}@media (max-width:992px){.form-container{max-width:90%}}@media (max-width:768px){.form-container{max-width:95%}.v-combobox,button[type=submit],input[type=text],textarea{font-size:.875rem;padding:.4rem}}@media (max-width:480px){.form-container{max-width:100%}.v-combobox,button[type=submit],input[type=text],textarea{font-size:.75rem;padding:.3rem}}",
+      "start": 1719309440556,
+      "end": 1719309440598,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue",
+        "mappings": "AACA,KAGE,kBAAmB,CAFnB,YAAa,CACb,qBAAsB,CAEtB,YACF,CAEA,OAGE,YAAa,CAFb,cAAe,CACf,eAAiB,CAEjB,kBACF,CAEA,gBACE,YAAa,CACb,qBAAsB,CAEtB,eAAgB,CADhB,UAEF,CAEA,YACE,kBACF,CAEA,MACE,aAAc,CACd,mBACF,CAEA,0DAOE,qBAAsB,CACtB,iBAAkB,CAClB,qBAAsB,CAHtB,cAAe,CADf,aAAe,CADf,UAMF,CAEA,8BACE,UACF,CAEA,oBAOE,iBAAkB,CANlB,uBAAyB,CAEzB,WAAY,CAOZ,qBAAsB,CARtB,UAAY,CAEZ,cAAe,CAIf,eAAgB,CAFhB,mBAAqB,CADrB,+BAAiC,CAIjC,UAEF,CAGA,0BACE,wBACF,CAEA,eACE,SACF,CAEA,0BACE,gBACE,aACF,CACF,CAEA,yBACE,gBACE,aACF,CACF,CAEA,yBACE,gBACE,aACF,CAEA,0DAIE,iBAAmB,CACnB,aACF,CACF,CAEA,yBACE,gBACE,cACF,CAEA,0DAIE,gBAAkB,CAClB,aACF,CACF",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue"
+        ],
+        "sourcesContent": [
+          "\n#app {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 2rem;\n}\n\n.title {\n  font-size: 2rem;\n  font-weight: bold;\n  color: tomato;\n  margin-bottom: 1rem;\n}\n\n.form-container {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 600px;\n}\n\n.form-group {\n  margin-bottom: 1rem;\n}\n\nlabel {\n  display: block;\n  margin-bottom: 0.5rem;\n}\n\ninput[type=\"text\"],\ntextarea,\nbutton[type=\"submit\"],\n.v-combobox {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\n.v-combobox .v-input__control {\n  width: 100%;\n}\n\nbutton[type=\"submit\"] {\n  background-color: #FF6347;\n  color: white;\n  border: none;\n  cursor: pointer;\n  transition: background-color 0.3s;\n  padding: 0.65rem 1rem; /* Adjusted padding */\n  align-self: center;\n  max-width: 200px; /* Maximalna širina dugmeta */\n  width: 100%; /* Da se dugme prilagodi roditeljskom kontejneru */\n  box-sizing: border-box; /* Da padding ne utječe na ukupnu širinu */\n}\n\n\nbutton[type=\"submit\"]:hover {\n  background-color: #ff1b3d;\n}\n\n.error-message {\n  color: red;\n}\n\n@media (max-width: 1200px) {\n  .form-container {\n    max-width: 80%;\n  }\n}\n\n@media (max-width: 992px) {\n  .form-container {\n    max-width: 90%;\n  }\n}\n\n@media (max-width: 768px) {\n  .form-container {\n    max-width: 95%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.875rem;\n    padding: 0.4rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .form-container {\n    max-width: 100%;\n  }\n\n  input[type=\"text\"],\n  textarea,\n  button[type=\"submit\"],\n  .v-combobox {\n    font-size: 0.75rem;\n    padding: 0.3rem;\n  }\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309440598,
+      "end": 1719309440598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309440598,
+      "end": 1719309440598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309440599,
+      "end": 1719309440599,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "#app[data-v-e23555b8]{align-items:center;display:flex;flex-direction:column;padding:2rem}.title[data-v-e23555b8]{color:tomato;font-size:2rem;font-weight:700;margin-bottom:1rem}.form-container[data-v-e23555b8]{display:flex;flex-direction:column;max-width:600px;width:100%}.form-group[data-v-e23555b8]{margin-bottom:1rem}label[data-v-e23555b8]{display:block;margin-bottom:.5rem}.v-combobox[data-v-e23555b8],button[type=submit][data-v-e23555b8],input[type=text][data-v-e23555b8],textarea[data-v-e23555b8]{border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:1rem;padding:.5rem;width:100%}.v-combobox .v-input__control[data-v-e23555b8]{width:100%}button[type=submit][data-v-e23555b8]{align-self:center;background-color:tomato;border:none;box-sizing:border-box;color:#fff;cursor:pointer;max-width:200px;padding:.65rem 1rem;transition:background-color .3s;width:100%}button[type=submit][data-v-e23555b8]:hover{background-color:#ff1b3d}.error-message[data-v-e23555b8]{color:red}@media (max-width:1200px){.form-container[data-v-e23555b8]{max-width:80%}}@media (max-width:992px){.form-container[data-v-e23555b8]{max-width:90%}}@media (max-width:768px){.form-container[data-v-e23555b8]{max-width:95%}.v-combobox[data-v-e23555b8],button[type=submit][data-v-e23555b8],input[type=text][data-v-e23555b8],textarea[data-v-e23555b8]{font-size:.875rem;padding:.4rem}}@media (max-width:480px){.form-container[data-v-e23555b8]{max-width:100%}.v-combobox[data-v-e23555b8],button[type=submit][data-v-e23555b8],input[type=text][data-v-e23555b8],textarea[data-v-e23555b8]{font-size:.75rem;padding:.3rem}}",
+      "start": 1719309440599,
+      "end": 1719309440602,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue",
+        "mappings": "AAAA,sBAAK,kBAAkB,CAAC,YAAY,CAAC,qBAAqB,CAAC,YAAY,CAAC,wBAAO,YAAY,CAAC,cAAc,CAAC,eAAe,CAAC,kBAAkB,CAAC,iCAAgB,YAAY,CAAC,qBAAqB,CAAC,eAAe,CAAC,UAAU,CAAC,6BAAY,kBAAkB,CAAC,uBAAM,aAAa,CAAC,mBAAmB,CAAC,8HAA0D,qBAAqB,CAAC,iBAAiB,CAAC,qBAAqB,CAAC,cAAc,CAAC,aAAa,CAAC,UAAU,CAAC,+CAA8B,UAAU,CAAC,qCAAoB,iBAAiB,CAAC,uBAAuB,CAAC,WAAW,CAAC,qBAAqB,CAAC,UAAU,CAAC,cAAc,CAAC,eAAe,CAAC,mBAAmB,CAAC,+BAA+B,CAAC,UAAU,CAAC,2CAA0B,wBAAwB,CAAC,gCAAe,SAAS,CAAC,0BAA0B,iCAAgB,aAAa,CAAC,CAAC,yBAAyB,iCAAgB,aAAa,CAAC,CAAC,yBAAyB,iCAAgB,aAAa,CAAC,8HAA0D,iBAAiB,CAAC,aAAa,CAAC,CAAC,yBAAyB,iCAAgB,cAAc,CAAC,8HAA0D,gBAAgB,CAAC,aAAa,CAAC",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Uredirecept/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309440602,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309440603,
+      "end": 1719309440603,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309440603,
+      "end": 1719309440604,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309440604,
+      "end": 1719309440604,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309440604,
+      "end": 1719309440604,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1719309440604,
+      "end": 1719309440604,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309440604,
+      "end": 1719309440604,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309440604,
+      "end": 1719309440604,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309440605,
+      "end": 1719309440605,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309440606,
+      "end": 1719309440606,
+      "order": "normal"
+    }
+  ]
+}

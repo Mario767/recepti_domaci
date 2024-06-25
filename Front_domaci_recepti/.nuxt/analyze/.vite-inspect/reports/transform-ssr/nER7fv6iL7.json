@@ -1,0 +1,256 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/ToolbarPublic.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nimport { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';\nimport { useRouter } from 'vue-router';\nimport accountStore from '@/composables/accountStore'; // Prilagodite putanju prema vašem stvarnom položaju\n\nconst drawer = ref(false);\nconst isMobile = ref(false);\nconst isAppInitialized = ref(false); // Novi ref za praćenje je li aplikacija inicijalizirana\nconst router = useRouter();\n\nconst links = [\n  { ime: 'Domaci recepti', ruta: '/', icon: 'mdi-home' },\n  { ime: 'Predjela', ruta: '/predjela', icon: 'mdi-food-apple' },\n  { ime: 'Glavna jela', ruta: '/glavnajela', icon: 'mdi-food-steak' },\n  { ime: 'Deserti', ruta: '/deserti', icon: 'mdi-food-croissant' },\n  { ime: 'Pretraži', ruta: '/search', icon: 'mdi-magnify' },\n  { ime: 'Profil', ruta: '/profil', icon: 'mdi-account', action: 'redirectToProfile' }\n];\n\nconst drawerIcon = computed(() => (drawer.value ? 'mdi-chevron-left' : 'mdi-menu'));\n\nconst updateIsMobile = () => {\n  isMobile.value = window.innerWidth <= 1024;\n};\n\nonMounted(() => {\n  updateIsMobile();\n  window.addEventListener('resize', updateIsMobile);\n  isAppInitialized.value = true; // Postavite na true nakon što je aplikacija inicijalizirana\n});\n\nonBeforeUnmount(() => {\n  window.removeEventListener('resize', updateIsMobile);\n});\n\nconst closeDrawerOnLargeScreen = () => {\n  if (!isMobile.value) {\n    drawer.value = false;\n  }\n};\n\nconst redirectToProfile = () => {\n  if (isMobile.value) {\n    drawer.value = false; // Zatvori drawer na mobilnim uređajima\n  }\n  if (accountStore.getters.isLoggedIn()) {\n    router.push('/profil');\n  } else {\n    router.push('/login');\n  }\n};\n\nwatch(() => router.currentRoute.value.path, () => {\n  if (isMobile.value) {\n    drawer.value = false; // Zatvori drawer kod promjene rute na mobilnim uređajima\n  }\n});\n</script>\n\n<template>\n\n  <v-app-bar fixed app height=\"80\" color=\"#C87C36\">\n    <div style=\"display: flex; align-items: center;\">\n      <img class=\"tw-max-h-[80px]\" src=\"/img/icon-hat.svg\" style=\"margin-left: 20px\"/>\n      <nuxt-link v-if=\"!isMobile && isAppInitialized\" to=\"/\" class=\"dm\" style=\"margin-left: 10px\">Domaći recepti</nuxt-link>\n    </div>\n    <v-spacer class=\"mb-8\" />\n    <div v-if=\"!isMobile && isAppInitialized\">\n      <nuxt-link to=\"/predjela\" class=\"t1\" style=\"margin: 0\">Predjela</nuxt-link>\n      <nuxt-link to=\"/glavnajela\" class=\"t1\">Glavna jela</nuxt-link>\n      <nuxt-link to=\"/deserti\" class=\"t1\">Deserti</nuxt-link>\n    </div>\n    <v-spacer />\n    <div v-if=\"!isMobile && isAppInitialized\" class=\"vl\" style=\"display: flex; align-items: center; font-size: 1.7em\">\n      <nuxt-link style=\"padding-right: 10px\" to=\"/search\">\n        <v-icon>mdi mdi-magnify</v-icon>\n      </nuxt-link>\n      <div>\n        <v-icon @click=\"redirectToProfile\">mdi mdi-account</v-icon>\n      </div>\n    </div>\n\n    <v-btn v-if=\"isMobile\" icon @click.stop=\"drawer = !drawer\">\n      <v-icon>{{ drawerIcon }}</v-icon>\n    </v-btn>\n  </v-app-bar>\n\n  <v-navigation-drawer v-if=\"isAppInitialized\" v-model=\"drawer\" app temporary @click=\"closeDrawerOnLargeScreen\">\n    <v-list>\n      <v-list-item v-for=\"(link, index) in links\" :key=\"index\" @click=\"link.action === 'redirectToProfile' ? redirectToProfile() : router.push(link.ruta)\" link>\n        <div style=\"display: flex; align-items: center;\">\n          <v-list-item-icon>\n            <v-icon>{{ link.icon }}</v-icon>\n          </v-list-item-icon>\n          <v-list-item-content>\n            <v-list-item-title style=\"padding-left: 5px\">{{ link.ime }}</v-list-item-title>\n          </v-list-item-content>\n        </div>\n      </v-list-item>\n    </v-list>\n  </v-navigation-drawer>\n\n  <v-main>\n    <v-container>\n      <v-row>\n        <v-col cols=\"12\" sm=\"12\">\n          <v-sheet min-height=\"100vh\" rounded=\"lg\">\n            <router-view></router-view>\n          </v-sheet>\n        </v-col>\n      </v-row>\n    </v-container>\n  </v-main>\n\n</template>\n\n<style scoped>\n.t1 {\n  color: #FFF;\n  font-family: 'Segoe Script', cursive;\n  font-size: 22px;\n  font-style: normal;\n  line-height: normal;\n  margin-left: 20px;\n}\n\n.t1:hover {\n  border-bottom: 3px solid white;\n}\n\n.dm {\n  color: #FFF;\n  font-family: 'Segoe Script', cursive;\n  font-size: 30px;\n  font-style: normal;\n  line-height: normal;\n  margin-left: 20px;\n}\n\n.vl {\n  margin-right: 2rem;\n  width: 5rem;\n}\n</style>\n",
+      "start": 1719309447563,
+      "end": 1719309448034,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309448034,
+      "end": 1719309448034,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/ToolbarPublic.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/ToolbarPublic.vue?vue&type=script&setup=true&lang.ts\";\nimport \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/ToolbarPublic.vue?vue&type=style&index=0&scoped=295dd680&lang.css\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"components/ToolbarPublic.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-295dd680\"]]);\n",
+      "start": 1719309448034,
+      "end": 1719309448060,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309448060,
+      "end": 1719309448060,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309448060,
+      "end": 1719309448061,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309448060,
+      "end": 1719309448061,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309448061,
+      "end": 1719309448061,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309448061,
+      "end": 1719309448061,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309448061,
+      "end": 1719309448062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309448061,
+      "end": 1719309448062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309448062,
+      "end": 1719309448062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309448062,
+      "end": 1719309448062,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309448062,
+      "end": 1719309448062,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309448062,
+      "end": 1719309448062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309448062,
+      "end": 1719309448062,
+      "order": "normal"
+    }
+  ]
+}

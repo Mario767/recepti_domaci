@@ -1,0 +1,5 @@
+const index_vue_vue_type_style_index_0_scoped_fbb93576_lang = "body[data-v-fbb93576]{background-color:#ffa07a}#app[data-v-fbb93576]{align-items:center;display:flex;height:100vh;justify-content:center}.login-container[data-v-fbb93576]{background-color:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);max-width:500px;padding:20px;width:100%}.title[data-v-fbb93576]{font-size:1.5em;margin-bottom:20px;text-align:center}.input-field[data-v-fbb93576]{border:1px solid #ccc;border-radius:5px;margin-bottom:10px}.input-field[data-v-fbb93576],.login-button[data-v-fbb93576]{font-size:1em;padding:15px;width:100%}.login-button[data-v-fbb93576]{background-color:#ffa07a;border:none;border-radius:5px;color:#fff;cursor:pointer;margin-top:10px}.register-container[data-v-fbb93576]{margin-top:10px;text-align:center}.register-button[data-v-fbb93576]{color:#ffa07a;text-decoration:none}.error-message[data-v-fbb93576]{color:red;margin-bottom:10px}[v-cloak][data-v-fbb93576]{display:none}";
+export {
+  index_vue_vue_type_style_index_0_scoped_fbb93576_lang as default
+};
+//# sourceMappingURL=index-styles-1.mjs-49d2ced7.js.map

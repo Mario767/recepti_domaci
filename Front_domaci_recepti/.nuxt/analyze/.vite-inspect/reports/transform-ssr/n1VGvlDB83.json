@@ -1,0 +1,294 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue?vue&type=style&index=0&scoped=b939f766&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.form-group {\n  margin-bottom: 1rem;\n}\nlabel {\n  display: block;\n}\ninput[type=\"text\"],\ntextarea {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\nbutton[type=\"submit\"] {\n  padding: 0.5rem 1rem;\n  background-color: #FF6347;\n  color: white;\n}\n",
+      "start": 1719309439724,
+      "end": 1719309439724,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue"
+        ],
+        "names": [],
+        "mappings": ";AAgGA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;AACrB;AACA,CAAC,CAAC,CAAC,CAAC,EAAE;EACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACP,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AACpB;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACzB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;AACd",
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div id=\"app\">\n    <h2>Dodaj novi recept</h2>\n    <form @submit.prevent=\"submitForm\">\n      <div class=\"form-group\">\n        <label for=\"naziv_recepta\">Naziv recepta:</label>\n        <input type=\"text\" id=\"naziv_recepta\" v-model=\"nazivRecepta\" maxlength=\"60\" required>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"opis\">Opis:</label>\n        <textarea id=\"opis\" v-model=\"opis\" maxlength=\"1000\" required></textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"slika\">Slika:</label>\n        <input type=\"file\" id=\"slika\" @change=\"handleFileUpload\" accept=\"image/*\" required>\n        <span v-if=\"slikaTooLarge\" style=\"color: red;\">Slika je prevelika (max 5 MB)</span>\n        <span v-if=\"slikaInvalidFormat\" style=\"color: red;\">Neispravan format slike</span>\n      </div>\n      <div class=\"form-group\">\n        <v-combobox\n          label=\"Vrsta jela\"\n          v-model=\"vrstaJela\"\n          :items=\"['Glavno jelo', 'Predjelo', 'Desert']\"\n          required\n        ></v-combobox>\n      </div>\n      <button type=\"submit\" :disabled=\"slikaTooLarge || slikaInvalidFormat\">Spremi recept</button>\n    </form>\n  </div>\n</template>\n\n<script>\nimport axios from 'axios';\n\nexport default {\n  data() {\n    return {\n      nazivRecepta: '',\n      opis: '',\n      slika: null,\n      vrstaJela: null,\n      slikaTooLarge: false,\n      slikaInvalidFormat: false\n    };\n  },\n  methods: {\n    handleFileUpload(event) {\n      const file = event.target.files[0];\n      const maxSize = 5 * 1024 * 1024; // 5 MB limit\n      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp']; // Allowed image types\n      if (!file) return;\n\n      if (file.size > maxSize) {\n        this.slikaTooLarge = true;\n        this.slikaInvalidFormat = false;\n        return;\n      }\n\n      if (!allowedTypes.includes(file.type)) {\n        this.slikaInvalidFormat = true;\n        this.slikaTooLarge = false;\n        return;\n      }\n\n      this.slikaTooLarge = false;\n      this.slikaInvalidFormat = false;\n      this.slika = file;\n    },\n    submitForm() {\n      const formData = new FormData();\n      formData.append('naziv_recepta', this.nazivRecepta);\n      formData.append('opis', this.opis);\n      formData.append('slika', this.slika);\n      formData.append('vrstajela', this.vrstaJela);\n\n      const authToken = document.cookie.replace(/(?:(?:^|.*;\\s*)authToken\\s*=\\s*([^;]*).*$)|^.*$/, \"$1\");\n\n      axios.post('http://localhost:8000/api/recepti', formData, {\n        headers: {\n          'Content-Type': 'multipart/form-data',\n          'Authorization': `Bearer ${authToken}`\n        }\n      })\n      .then(() => {\n        // Uspješno spremanje recepta, preusmjeri korisnika na /mojirecepti\n        this.$router.push('/mojirecepti');\n      })\n      .catch(error => {\n        console.error('Došlo je do greške prilikom spremanja recepta:', error);\n      });\n    }\n  }\n};\n</script>\n\n<style scoped>\n.form-group {\n  margin-bottom: 1rem;\n}\nlabel {\n  display: block;\n}\ninput[type=\"text\"],\ntextarea {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\nbutton[type=\"submit\"] {\n  padding: 0.5rem 1rem;\n  background-color: #FF6347;\n  color: white;\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309439725,
+      "end": 1719309439725,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309439725,
+      "end": 1719309439725,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309439726,
+      "end": 1719309439726,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309439726,
+      "end": 1719309439726,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309439727,
+      "end": 1719309439727,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".form-group{margin-bottom:1rem}label{display:block}input[type=text],textarea{border:1px solid #ccc;border-radius:4px;font-size:1rem;padding:.5rem;width:100%}button[type=submit]{background-color:tomato;color:#fff;padding:.5rem 1rem}",
+      "start": 1719309439727,
+      "end": 1719309439759,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue",
+        "mappings": "AACA,YACE,kBACF,CACA,MACE,aACF,CACA,0BAKE,qBAAsB,CACtB,iBAAkB,CAFlB,cAAe,CADf,aAAe,CADf,UAKF,CACA,oBAEE,uBAAyB,CACzB,UAAY,CAFZ,kBAGF",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue"
+        ],
+        "sourcesContent": [
+          "\n.form-group {\n  margin-bottom: 1rem;\n}\nlabel {\n  display: block;\n}\ninput[type=\"text\"],\ntextarea {\n  width: 100%;\n  padding: 0.5rem;\n  font-size: 1rem;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\nbutton[type=\"submit\"] {\n  padding: 0.5rem 1rem;\n  background-color: #FF6347;\n  color: white;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309439759,
+      "end": 1719309439759,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309439785,
+      "end": 1719309439785,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309439786,
+      "end": 1719309439786,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".form-group[data-v-b939f766]{margin-bottom:1rem}label[data-v-b939f766]{display:block}input[type=text][data-v-b939f766],textarea[data-v-b939f766]{border:1px solid #ccc;border-radius:4px;font-size:1rem;padding:.5rem;width:100%}button[type=submit][data-v-b939f766]{background-color:tomato;color:#fff;padding:.5rem 1rem}",
+      "start": 1719309439787,
+      "end": 1719309439789,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue",
+        "mappings": "AAAA,6BAAY,kBAAkB,CAAC,uBAAM,aAAa,CAAC,4DAA0B,qBAAqB,CAAC,iBAAiB,CAAC,cAAc,CAAC,aAAa,CAAC,UAAU,CAAC,qCAAoB,uBAAuB,CAAC,UAAU,CAAC,kBAAkB",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Dodajrecept/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309439791,
+      "end": 1719309439791,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309439792,
+      "end": 1719309439793,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309439792,
+      "end": 1719309439793,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309439793,
+      "end": 1719309439793,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309439793,
+      "end": 1719309439793,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309439822,
+      "end": 1719309439822,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309439823,
+      "end": 1719309439824,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309439826,
+      "end": 1719309439826,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309439829,
+      "end": 1719309439829,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309439830,
+      "end": 1719309439830,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".form-group[data-v-b939f766]{margin-bottom:1rem}label[data-v-b939f766]{display:block}input[type=text][data-v-b939f766],textarea[data-v-b939f766]{border:1px solid #ccc;border-radius:4px;font-size:1rem;padding:.5rem;width:100%}button[type=submit][data-v-b939f766]{background-color:tomato;color:#fff;padding:.5rem 1rem}\"",
+      "start": 1719309439834,
+      "end": 1719309439834,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309439861,
+      "end": 1719309439861,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309439861,
+      "end": 1719309439861,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309439862,
+      "end": 1719309439862,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309439865,
+      "end": 1719309439865,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309439866,
+      "end": 1719309439866,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309439867,
+      "end": 1719309439867,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309439868,
+      "end": 1719309439868,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309439868,
+      "end": 1719309439868,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309439869,
+      "end": 1719309439869,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309439869,
+      "end": 1719309439869,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309439869,
+      "end": 1719309439869,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309439869,
+      "end": 1719309439869,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309439871,
+      "end": 1719309439871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309439871,
+      "end": 1719309439871,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309439872,
+      "end": 1719309439872,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309439873,
+      "end": 1719309439873,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309439873,
+      "end": 1719309439874,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309439874,
+      "end": 1719309439874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309439874,
+      "end": 1719309439874,
+      "order": "normal"
+    }
+  ]
+}

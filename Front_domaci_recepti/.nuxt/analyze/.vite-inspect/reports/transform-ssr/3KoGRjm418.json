@@ -1,0 +1,294 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue?vue&type=style&index=0&scoped=f350723b&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.card-recepti {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n}\n\n.card {\n  flex: 1 0 21%; /* Četiri kartice u jednom redu */\n  margin: 1.5%;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  transition: transform 0.3s ease;\n  max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n}\n\n.card img {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n}\n\n.card-body {\n  padding: 15px;\n}\n\n.card-title {\n  font-style: oblique;\n  font-weight: bold;\n  color: #FF6347; /* Tomato */\n  text-shadow: 1px 1px #ff1b3d; /* Tomato */\n  font-size: 1.3rem; /* Smanjena veličina naslova */\n \n  text-align: center;\n}\n\n.card-buttons {\n  visibility: hidden;\n  display: flex;\n  justify-content: center; /* Centriranje dugmadi */\n  \n  margin-bottom: 10px; /* Smanjen razmak ispod naslova */\n}\n\n.delete-button,\n.edit-button {\n  padding: 5px 10px;\n  margin: 0 5px; /* Smanjen razmak između dugmadi */\n  border: none;\n  border-radius: 5px;\n  background-color: #FF6347;\n  color: white;\n  cursor: pointer;\n}\n\n.delete-button:hover,\n.edit-button:hover {\n  \n  background-color: #ff1b3d;\n}\n.card:hover .card-buttons {\n  visibility: visible; /* Prikaz dugmadi kada se prelazi preko kartice */\n}\n\n.card-hover:hover {\n  transform: scale(1.05);\n  \n}\n",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue"
+        ],
+        "names": [],
+        "mappings": ";AAiEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B;;AAEA,CAAC,CAAC,CAAC,CAAC,EAAE;EACJ,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC;EAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;AAC3E;;AAEA,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE;EACR,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;AACf;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACjB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;;EAEjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;;EAEjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;AACxD;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACzB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;;EAEjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;AACxE;;AAEA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;AAExB",
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div class=\"card-recepti\">\n    <div v-for=\"recept in recepti\" :key=\"recept.recept_id\" class=\"card card-hover\" @click=\"goToRecept(recept)\">\n      <img :src=\"getImageUrl(recept.slika)\" alt=\"Recept slika\">\n      <div class=\"card-body\">\n        <h5 class=\"card-title\">{{ recept.naziv_recepta }}</h5>\n      </div>\n      <div class=\"card-buttons\">\n        <button class=\"delete-button\" @click.stop=\"deleteRecept(recept.recept_id)\">Izbriši</button>\n        <button class=\"edit-button\" @click.stop=\"editRecept(recept.recept_id)\">Uredi</button>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport axios from 'axios';\nimport Cookies from 'universal-cookie';\n\n\nconst cookies = new Cookies();\nexport default {\n  props: {\n    recepti: {\n      type: Array,\n      required: true\n    }\n  },\n  \n  methods: {\n    getImageUrl(slika) {\n      return 'http://127.0.0.1:8000/' + slika;\n    },\n    goToRecept(recept) {\n      let formattedNaziv = recept.naziv_recepta.replace(/\\s+/g, '_'); // Zamjenjuje sve razmake s '_'\n      this.$router.push({ path: `/News/${formattedNaziv}` });\n      accountStore.actions.setReceptId(recept.recept_id); // Dodajte ovu liniju\n    },\n    deleteRecept(receptId) {\n      const authToken = cookies.get('authToken');\n      axios.post('http://127.0.0.1:8000/api/obrisirec', {\n        recept_id: receptId,\n      }, {\n        headers: {\n          'Authorization': `Bearer ${authToken}`\n        }\n      }).then(response => {\n        console.log('Recept je uspješno izbrisan:', response);\n        this.$emit('recept-izbrisan'); // Emitujte događaj\n      }).catch(error => {\n        console.error('Došlo je do pogreške prilikom brisanja recepta:', error);\n      });\n    },\n    editRecept(receptId) {\n  // Spremite ID recepta\n  accountStore.actions.setReceptId(receptId);\n  \n  // Navigirajte na rutu /uredirecept\n  this.$router.push({ path: `/uredirecept` });\n}\n  }\n}\n</script>\n\n<style scoped>\n.card-recepti {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n}\n\n.card {\n  flex: 1 0 21%; /* Četiri kartice u jednom redu */\n  margin: 1.5%;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  transition: transform 0.3s ease;\n  max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n}\n\n.card img {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n}\n\n.card-body {\n  padding: 15px;\n}\n\n.card-title {\n  font-style: oblique;\n  font-weight: bold;\n  color: #FF6347; /* Tomato */\n  text-shadow: 1px 1px #ff1b3d; /* Tomato */\n  font-size: 1.3rem; /* Smanjena veličina naslova */\n \n  text-align: center;\n}\n\n.card-buttons {\n  visibility: hidden;\n  display: flex;\n  justify-content: center; /* Centriranje dugmadi */\n  \n  margin-bottom: 10px; /* Smanjen razmak ispod naslova */\n}\n\n.delete-button,\n.edit-button {\n  padding: 5px 10px;\n  margin: 0 5px; /* Smanjen razmak između dugmadi */\n  border: none;\n  border-radius: 5px;\n  background-color: #FF6347;\n  color: white;\n  cursor: pointer;\n}\n\n.delete-button:hover,\n.edit-button:hover {\n  \n  background-color: #ff1b3d;\n}\n.card:hover .card-buttons {\n  visibility: visible; /* Prikaz dugmadi kada se prelazi preko kartice */\n}\n\n.card-hover:hover {\n  transform: scale(1.05);\n  \n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309441324,
+      "end": 1719309441324,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".card-recepti{display:flex;flex-wrap:wrap;justify-content:flex-start}.card{border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 4px rgba(0,0,0,.1);flex:1 0 21%;margin:1.5%;max-width:22%;transition:transform .3s ease}.card img{height:200px;-o-object-fit:cover;object-fit:cover;width:100%}.card-body{padding:15px}.card-title{color:tomato;font-size:1.3rem;font-style:oblique;font-weight:700;text-align:center;text-shadow:1px 1px #ff1b3d}.card-buttons{display:flex;justify-content:center;margin-bottom:10px;visibility:hidden}.delete-button,.edit-button{background-color:tomato;border:none;border-radius:5px;color:#fff;cursor:pointer;margin:0 5px;padding:5px 10px}.delete-button:hover,.edit-button:hover{background-color:#ff1b3d}.card:hover .card-buttons{visibility:visible}.card-hover:hover{transform:scale(1.05)}",
+      "start": 1719309441324,
+      "end": 1719309441360,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue",
+        "mappings": "AACA,cACE,YAAa,CACb,cAAe,CACf,0BACF,CAEA,MAGE,qBAAsB,CACtB,iBAAkB,CAClB,mCAAwC,CAJxC,YAAa,CACb,WAAY,CAKZ,aAA8B,CAD9B,6BAEF,CAEA,UAEE,YAAa,CACb,mBAAiB,CAAjB,gBAAiB,CAFjB,UAGF,CAEA,WACE,YACF,CAEA,YAGE,YAAc,CAEd,gBAAiB,CAJjB,kBAAmB,CACnB,eAAiB,CAKjB,iBAAkB,CAHlB,2BAIF,CAEA,cAEE,YAAa,CACb,sBAAuB,CAEvB,kBAAmB,CAJnB,iBAKF,CAEA,4BAME,uBAAyB,CAFzB,WAAY,CACZ,iBAAkB,CAElB,UAAY,CACZ,cAAe,CALf,YAAa,CADb,gBAOF,CAEA,wCAGE,wBACF,CACA,0BACE,kBACF,CAEA,kBACE,qBAEF",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue"
+        ],
+        "sourcesContent": [
+          "\n.card-recepti {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n}\n\n.card {\n  flex: 1 0 21%; /* Četiri kartice u jednom redu */\n  margin: 1.5%;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  transition: transform 0.3s ease;\n  max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n}\n\n.card img {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n}\n\n.card-body {\n  padding: 15px;\n}\n\n.card-title {\n  font-style: oblique;\n  font-weight: bold;\n  color: #FF6347; /* Tomato */\n  text-shadow: 1px 1px #ff1b3d; /* Tomato */\n  font-size: 1.3rem; /* Smanjena veličina naslova */\n \n  text-align: center;\n}\n\n.card-buttons {\n  visibility: hidden;\n  display: flex;\n  justify-content: center; /* Centriranje dugmadi */\n  \n  margin-bottom: 10px; /* Smanjen razmak ispod naslova */\n}\n\n.delete-button,\n.edit-button {\n  padding: 5px 10px;\n  margin: 0 5px; /* Smanjen razmak između dugmadi */\n  border: none;\n  border-radius: 5px;\n  background-color: #FF6347;\n  color: white;\n  cursor: pointer;\n}\n\n.delete-button:hover,\n.edit-button:hover {\n  \n  background-color: #ff1b3d;\n}\n.card:hover .card-buttons {\n  visibility: visible; /* Prikaz dugmadi kada se prelazi preko kartice */\n}\n\n.card-hover:hover {\n  transform: scale(1.05);\n  \n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309441360,
+      "end": 1719309441360,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309441360,
+      "end": 1719309441360,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309441361,
+      "end": 1719309441361,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".card-recepti[data-v-f350723b]{display:flex;flex-wrap:wrap;justify-content:flex-start}.card[data-v-f350723b]{border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 4px rgba(0,0,0,.1);flex:1 0 21%;margin:1.5%;max-width:22%;transition:transform .3s ease}.card img[data-v-f350723b]{height:200px;-o-object-fit:cover;object-fit:cover;width:100%}.card-body[data-v-f350723b]{padding:15px}.card-title[data-v-f350723b]{color:tomato;font-size:1.3rem;font-style:oblique;font-weight:700;text-align:center;text-shadow:1px 1px #ff1b3d}.card-buttons[data-v-f350723b]{display:flex;justify-content:center;margin-bottom:10px;visibility:hidden}.delete-button[data-v-f350723b],.edit-button[data-v-f350723b]{background-color:tomato;border:none;border-radius:5px;color:#fff;cursor:pointer;margin:0 5px;padding:5px 10px}.delete-button[data-v-f350723b]:hover,.edit-button[data-v-f350723b]:hover{background-color:#ff1b3d}.card:hover .card-buttons[data-v-f350723b]{visibility:visible}.card-hover[data-v-f350723b]:hover{transform:scale(1.05)}",
+      "start": 1719309441361,
+      "end": 1719309441363,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue",
+        "mappings": "AAAA,+BAAc,YAAY,CAAC,cAAc,CAAC,0BAA0B,CAAC,uBAAM,qBAAqB,CAAC,iBAAiB,CAAC,mCAAmC,CAAC,YAAY,CAAC,WAAW,CAAC,aAAa,CAAC,6BAA6B,CAAC,2BAAU,YAAY,CAAC,mBAAmB,CAAC,gBAAgB,CAAC,UAAU,CAAC,4BAAW,YAAY,CAAC,6BAAY,YAAY,CAAC,gBAAgB,CAAC,kBAAkB,CAAC,eAAe,CAAC,iBAAiB,CAAC,2BAA2B,CAAC,+BAAc,YAAY,CAAC,sBAAsB,CAAC,kBAAkB,CAAC,iBAAiB,CAAC,8DAA4B,uBAAuB,CAAC,WAAW,CAAC,iBAAiB,CAAC,UAAU,CAAC,cAAc,CAAC,YAAY,CAAC,gBAAgB,CAAC,0EAAwC,wBAAwB,CAAC,2CAA0B,kBAAkB,CAAC,mCAAkB,qBAAqB",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/Mojirec.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309441363,
+      "end": 1719309441363,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309441364,
+      "end": 1719309441364,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441365,
+      "end": 1719309441365,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309441366,
+      "end": 1719309441366,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309441366,
+      "end": 1719309441366,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309441367,
+      "end": 1719309441367,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309441367,
+      "end": 1719309441367,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309441367,
+      "end": 1719309441367,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue?vue&type=style&index=0&scoped=d3a2679e&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\nbody {\n  background-color: #FFA07A;\n}\n\n#app {\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.login-container {\n  background-color: white;\n  padding: 20px;\n  border-radius: 10px;\n  width: 80%;\n  max-width: 500px;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n}\n\n.title {\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1.5em;\n}\n\n.input-field {\n  width: 100%;\n  padding: 15px;\n  margin-bottom: 10px;\n  border-radius: 5px;\n  border: 1px solid #ccc;\n  font-size: 1em;\n}\n\n.register-button {\n  width: 100%;\n  padding: 15px;\n  background-color: #FFA07A;\n  color: white;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 1em;\n  margin-top: 10px;\n}\n\n.error-message {\n  color: red;\n}\n\n.snackbar {\n  visibility: hidden;\n  min-width: 250px;\n  margin-left: -125px;\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n  border-radius: 2px;\n  padding: 16px;\n  position: fixed;\n  z-index: 1;\n  left: 50%;\n  bottom: 30px;\n  font-size: 17px;\n}\n\n.snackbar.show {\n  visibility: visible;\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\n  animation: fadein 0.5s, fadeout 0.5s 2.5s;\n}\n\n@-webkit-keyframes fadein {\n  from {bottom: 0; opacity: 0;} \n  to {bottom: 30px; opacity: 1;}\n}\n\n@keyframes fadein {\n  from {bottom: 0; opacity: 0;}\n  to {bottom: 30px; opacity: 1;}\n}\n\n@-webkit-keyframes fadeout {\n  from {bottom: 30px; opacity: 1;} \n  to {bottom: 0; opacity: 0;}\n}\n\n@keyframes fadeout {\n  from {bottom: 30px; opacity: 1;}\n  to {bottom: 0; opacity: 0;}\n}\n",
+      "start": 1719309441555,
+      "end": 1719309441555,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div id=\"app\">\n    <div class=\"login-container\">\n      <h1 class=\"title\">Domaći recepti</h1>\n      <div v-if=\"!showConfirmationCodeInput && !registrationSuccess\">\n        <input class=\"input-field\" type=\"text\" placeholder=\"Unesi korisničko ime\" v-model=\"korisnicko_ime\" />\n        <p v-if=\"errors.korisnicko_ime\" class=\"error-message\">{{ errors.korisnicko_ime }}</p>\n\n        <input class=\"input-field\" type=\"email\" placeholder=\"Unesi email\" v-model=\"email\" />\n        <p v-if=\"errors.email\" class=\"error-message\">{{ errors.email }}</p>\n\n        <input class=\"input-field\" type=\"password\" placeholder=\"Unesi lozinku\" v-model=\"lozinka\" />\n        <p v-if=\"errors.lozinka\" class=\"error-message\">{{ errors.lozinka }}</p>\n\n        <input class=\"input-field\" type=\"password\" placeholder=\"Potvrdi lozinku\" v-model=\"potvrda_lozinke\" />\n        <p v-if=\"errors.potvrda_lozinke\" class=\"error-message\">{{ errors.potvrda_lozinke }}</p>\n\n        <button class=\"register-button\" @click=\"sendConfirmationCode\">Registriraj se</button>\n      </div>\n      <div v-else-if=\"showConfirmationCodeInput && !registrationSuccess\">\n        <input class=\"input-field\" type=\"text\" placeholder=\"Unesi kod za potvrdu\" v-model=\"confirmationCode\" />\n        <p v-if=\"errors.confirmationCode\" class=\"error-message\">{{ errors.confirmationCode }}</p>\n        <button class=\"register-button\" @click=\"confirmCode\">Potvrdi kod</button>\n        <button class=\"register-button\" @click=\"resendConfirmationCode\">Ponovno pošalji kod</button>\n        <p v-if=\"preostaloVrijeme > 0\">Kod ističe za: {{ preostaloVrijeme }} sekundi</p>\n        <p v-else>Kod je istekao. Ponovno pošaljite kod za prijavu.</p>\n      </div>\n      <div v-else-if=\"registrationSuccess\">\n        <h2>Uspješna registracija!</h2>\n        <p>Bit ćete preusmjereni na stranicu za prijavu...</p>\n      </div>\n      <p v-if=\"greska\" class=\"error-message\">{{ greska }}</p>\n      <div v-if=\"obavijest\" :class=\"{ snackbar: true, show: showSnackbar }\">{{ obavijest }}</div>\n    </div>\n  </div>\n</template>\n\n<script setup lang=\"ts\">\nimport { ref } from 'vue'\nimport { useRouter } from 'vue-router'\nimport axios from 'axios'\n\nconst router = useRouter()\n\nconst korisnicko_ime = ref('')\nconst lozinka = ref('')\nconst email = ref('')\nconst potvrda_lozinke = ref('')\nconst confirmationCode = ref('')\nconst showConfirmationCodeInput = ref(false)\nconst greska = ref('')\nconst registrationSuccess = ref(false)\nconst obavijest = ref('')\nconst showSnackbar = ref(false)\nconst preostaloVrijeme = ref('')\nconst errors = ref({\n  korisnicko_ime: '',\n  email: '',\n  lozinka: '',\n  potvrda_lozinke: '',\n  confirmationCode: '' // Dodali smo novo polje za grešku kod koda za potvrdu\n})\n\nlet countdownInterval = null\n\nconst startCountdown = () => {\n  clearInterval(countdownInterval); // Resetirajte odbrojavanje\n  let timeLeft = 180; // 3 minute\n  countdownInterval = setInterval(() => {\n    if (timeLeft > 0) {\n      timeLeft--;\n      preostaloVrijeme.value = timeLeft;\n    } else {\n      clearInterval(countdownInterval);\n      preostaloVrijeme.value = '';\n    }\n  }, 1000);\n}\n\nconst validateForm = () => {\n  let valid = true;\n\n  // Validacija za korisničko ime\n  if (!korisnicko_ime.value) {\n    errors.value.korisnicko_ime = 'Korisničko ime je obavezno.';\n    valid = false;\n  } else if (korisnicko_ime.value.length > 40) {\n    errors.value.korisnicko_ime = 'Korisničko ime ne može biti duže od 40 znakova.';\n    valid = false;\n  } else {\n    errors.value.korisnicko_ime = '';\n  }\n\n  // Validacija za email\n  if (!email.value) {\n    errors.value.email = 'Email je obavezan.';\n    valid = false;\n  } else if (email.value.length > 50) {\n    errors.value.email = 'Email ne može biti duži od 50 znakova.';\n    valid = false;\n  } else if (!email.value.includes('@')) {\n    errors.value.email = 'Email mora sadržavati @ znak.';\n    valid = false;\n  } else {\n    errors.value.email = '';\n  }\n\n  // Validacija za lozinku\n  if (!lozinka.value) {\n    errors.value.lozinka = 'Lozinka je obavezna.';\n    valid = false;\n  } else if (lozinka.value.length > 50) {\n    errors.value.lozinka = 'Lozinka ne može biti duža od 50 znakova.';\n    valid = false;\n  } else if (lozinka.value.length < 6) {\n    errors.value.lozinka = 'Lozinka mora biti duža od 5 znakova.';\n    valid = false;\n  } else {\n    errors.value.lozinka = '';\n  }\n\n  // Validacija za potvrdu lozinke\n  if (!potvrda_lozinke.value) {\n    errors.value.potvrda_lozinke = 'Potvrda lozinke je obavezna.';\n    valid = false;\n  } else if (potvrda_lozinke.value !== lozinka.value) {\n    errors.value.potvrda_lozinke = 'Lozinke se moraju podudarati.';\n    valid = false;\n  } else {\n    errors.value.potvrda_lozinke = '';\n  }\n\n  return valid;\n}\n\nconst sendConfirmationCode = async () => {\n  if (validateForm()) {\n    try {\n      const response = await axios.post('http://localhost:8000/api/sendcode', {\n        korisnicko_ime: korisnicko_ime.value,\n        email: email.value,\n        lozinka: lozinka.value,\n        potvrda_lozinke: potvrda_lozinke.value\n      })\n      console.log(response)\n      if (response.status === 200) {\n        showConfirmationCodeInput.value = true\n        startCountdown()\n      }\n    } catch (error) {\n      if (error.response && error.response.status === 422) {\n        const { errors: serverErrors } = error.response.data;\n        // Postavite greske dobivene od servera u errors ref objekt\n        if (serverErrors.korisnicko_ime) {\n          errors.value.korisnicko_ime = serverErrors.korisnicko_ime[0];\n        }\n        if (serverErrors.email) {\n          errors.value.email = serverErrors.email[0];\n        }\n        if (serverErrors.lozinka) {\n          errors.value.lozinka = serverErrors.lozinka[0];\n        }\n        if (serverErrors.potvrda_lozinke) {\n          errors.value.potvrda_lozinke = serverErrors.potvrda_lozinke[0];\n        }\n      } else {\n        greska.value = 'Došlo je do greške. Pokušajte ponovno.';\n      }\n      console.error(error)\n    }\n  }\n}\n\nconst confirmCode = async () => {\n  try {\n    const response = await axios.post('http://localhost:8000/api/confirmcode', {\n      confirmationCode: confirmationCode.value,\n      korisnicko_ime: korisnicko_ime.value,\n      lozinka: lozinka.value,\n      email: email.value,\n    });\n    console.log(response);\n    if (response.data.message === 'Registracija uspješna!') {\n      registrationSuccess.value = true;\n      obavijest.value = 'Registracija uspješna!';\n      showSnackbar.value = true;\n      clearInterval(countdownInterval);\n      setTimeout(() => {\n        router.push('/login');\n      }, 2000); // Automatsko preusmjeravanje nakon 2 sekunde\n    } else {\n      // Postavite grešku za kod za potvrdu\n      errors.value.confirmationCode = response.data.message;\n      obavijest.value = response.data.message;\n      showSnackbar.value = true;\n      setTimeout(() => {\n        showSnackbar.value = false;\n      }, 3000); // Automatsko skrivanje obavijesti nakon 3 sekunde\n    }\n  } catch (error) {\n    console.error(error);\n    errors.value.confirmationCode = 'Neispravan kod za potvrdu.';\n  }\n};\n\nconst resendConfirmationCode = async () => {\n  try {\n    const response = await axios.post('http://localhost:8000/api/sendcode', {\n      korisnicko_ime: korisnicko_ime.value,\n      lozinka: lozinka.value,\n      email: email.value,\n    })\n    console.log(response)\n    if (response.status === 200) {\n      startCountdown()\n    }\n  } catch (error) {\n    console.error(error)\n  }\n}\n</script>\n\n<style scoped>\nbody {\n  background-color: #FFA07A;\n}\n\n#app {\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.login-container {\n  background-color: white;\n  padding: 20px;\n  border-radius: 10px;\n  width: 80%;\n  max-width: 500px;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n}\n\n.title {\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1.5em;\n}\n\n.input-field {\n  width: 100%;\n  padding: 15px;\n  margin-bottom: 10px;\n  border-radius: 5px;\n  border: 1px solid #ccc;\n  font-size: 1em;\n}\n\n.register-button {\n  width: 100%;\n  padding: 15px;\n  background-color: #FFA07A;\n  color: white;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 1em;\n  margin-top: 10px;\n}\n\n.error-message {\n  color: red;\n}\n\n.snackbar {\n  visibility: hidden;\n  min-width: 250px;\n  margin-left: -125px;\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n  border-radius: 2px;\n  padding: 16px;\n  position: fixed;\n  z-index: 1;\n  left: 50%;\n  bottom: 30px;\n  font-size: 17px;\n}\n\n.snackbar.show {\n  visibility: visible;\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\n  animation: fadein 0.5s, fadeout 0.5s 2.5s;\n}\n\n@-webkit-keyframes fadein {\n  from {bottom: 0; opacity: 0;} \n  to {bottom: 30px; opacity: 1;}\n}\n\n@keyframes fadein {\n  from {bottom: 0; opacity: 0;}\n  to {bottom: 30px; opacity: 1;}\n}\n\n@-webkit-keyframes fadeout {\n  from {bottom: 30px; opacity: 1;} \n  to {bottom: 0; opacity: 0;}\n}\n\n@keyframes fadeout {\n  from {bottom: 30px; opacity: 1;}\n  to {bottom: 0; opacity: 0;}\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441557,
+      "end": 1719309441557,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441557,
+      "end": 1719309441557,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441558,
+      "end": 1719309441558,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441558,
+      "end": 1719309441558,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309441558,
+      "end": 1719309441558,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "body{background-color:#ffa07a}#app{align-items:center;display:flex;height:100vh;justify-content:center}.login-container{background-color:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);max-width:500px;padding:20px;width:80%}.title{font-size:1.5em;margin-bottom:20px;text-align:center}.input-field{border:1px solid #ccc;border-radius:5px;margin-bottom:10px}.input-field,.register-button{font-size:1em;padding:15px;width:100%}.register-button{background-color:#ffa07a;border:none;border-radius:5px;color:#fff;cursor:pointer;margin-top:10px}.error-message{color:red}.snackbar{background-color:#333;border-radius:2px;bottom:30px;color:#fff;font-size:17px;left:50%;margin-left:-125px;min-width:250px;padding:16px;position:fixed;text-align:center;visibility:hidden;z-index:1}.snackbar.show{animation:fadein .5s,fadeout .5s 2.5s;visibility:visible}@keyframes fadein{0%{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadeout{0%{bottom:30px;opacity:1}to{bottom:0;opacity:0}}",
+      "start": 1719309441558,
+      "end": 1719309441594,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue",
+        "mappings": "AACA,KACE,wBACF,CAEA,KAIE,kBAAmB,CAFnB,YAAa,CADb,YAAa,CAEb,sBAEF,CAEA,iBACE,qBAAuB,CAEvB,kBAAmB,CAGnB,kCAA2C,CAD3C,eAAgB,CAHhB,YAAa,CAEb,SAGF,CAEA,OAGE,eAAgB,CADhB,kBAAmB,CADnB,iBAGF,CAEA,aAKE,qBAAsB,CADtB,iBAAkB,CADlB,kBAIF,CAEA,8BAHE,aAAc,CAJd,YAAa,CADb,UAkBF,CAVA,iBAGE,wBAAyB,CAEzB,WAAY,CACZ,iBAAkB,CAFlB,UAAY,CAGZ,cAAe,CAEf,eACF,CAEA,eACE,SACF,CAEA,UAIE,qBAAsB,CAGtB,iBAAkB,CAKlB,WAAY,CAPZ,UAAW,CAQX,cAAe,CAFf,QAAS,CART,kBAAmB,CADnB,eAAgB,CAMhB,YAAa,CACb,cAAe,CAHf,iBAAkB,CALlB,iBAAkB,CASlB,SAIF,CAEA,eAGE,qCAAyC,CAFzC,kBAGF,CAOA,kBACE,GAAM,QAAS,CAAE,SAAW,CAC5B,GAAI,WAAY,CAAE,SAAW,CAC/B,CAOA,mBACE,GAAM,WAAY,CAAE,SAAW,CAC/B,GAAI,QAAS,CAAE,SAAW,CAC5B",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue"
+        ],
+        "sourcesContent": [
+          "\nbody {\n  background-color: #FFA07A;\n}\n\n#app {\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.login-container {\n  background-color: white;\n  padding: 20px;\n  border-radius: 10px;\n  width: 80%;\n  max-width: 500px;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n}\n\n.title {\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1.5em;\n}\n\n.input-field {\n  width: 100%;\n  padding: 15px;\n  margin-bottom: 10px;\n  border-radius: 5px;\n  border: 1px solid #ccc;\n  font-size: 1em;\n}\n\n.register-button {\n  width: 100%;\n  padding: 15px;\n  background-color: #FFA07A;\n  color: white;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 1em;\n  margin-top: 10px;\n}\n\n.error-message {\n  color: red;\n}\n\n.snackbar {\n  visibility: hidden;\n  min-width: 250px;\n  margin-left: -125px;\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n  border-radius: 2px;\n  padding: 16px;\n  position: fixed;\n  z-index: 1;\n  left: 50%;\n  bottom: 30px;\n  font-size: 17px;\n}\n\n.snackbar.show {\n  visibility: visible;\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\n  animation: fadein 0.5s, fadeout 0.5s 2.5s;\n}\n\n@-webkit-keyframes fadein {\n  from {bottom: 0; opacity: 0;} \n  to {bottom: 30px; opacity: 1;}\n}\n\n@keyframes fadein {\n  from {bottom: 0; opacity: 0;}\n  to {bottom: 30px; opacity: 1;}\n}\n\n@-webkit-keyframes fadeout {\n  from {bottom: 30px; opacity: 1;} \n  to {bottom: 0; opacity: 0;}\n}\n\n@keyframes fadeout {\n  from {bottom: 30px; opacity: 1;}\n  to {bottom: 0; opacity: 0;}\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309441594,
+      "end": 1719309441594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309441594,
+      "end": 1719309441594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309441594,
+      "end": 1719309441594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "body[data-v-d3a2679e]{background-color:#ffa07a}#app[data-v-d3a2679e]{align-items:center;display:flex;height:100vh;justify-content:center}.login-container[data-v-d3a2679e]{background-color:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);max-width:500px;padding:20px;width:80%}.title[data-v-d3a2679e]{font-size:1.5em;margin-bottom:20px;text-align:center}.input-field[data-v-d3a2679e]{border:1px solid #ccc;border-radius:5px;margin-bottom:10px}.input-field[data-v-d3a2679e],.register-button[data-v-d3a2679e]{font-size:1em;padding:15px;width:100%}.register-button[data-v-d3a2679e]{background-color:#ffa07a;border:none;border-radius:5px;color:#fff;cursor:pointer;margin-top:10px}.error-message[data-v-d3a2679e]{color:red}.snackbar[data-v-d3a2679e]{background-color:#333;border-radius:2px;bottom:30px;color:#fff;font-size:17px;left:50%;margin-left:-125px;min-width:250px;padding:16px;position:fixed;text-align:center;visibility:hidden;z-index:1}.snackbar.show[data-v-d3a2679e]{animation:fadein-d3a2679e .5s,fadeout-d3a2679e .5s 2.5s;visibility:visible}@keyframes fadein-d3a2679e{0%{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadeout-d3a2679e{0%{bottom:30px;opacity:1}to{bottom:0;opacity:0}}",
+      "start": 1719309441594,
+      "end": 1719309441596,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue",
+        "mappings": "AAAA,sBAAK,wBAAwB,CAAC,sBAAK,kBAAkB,CAAC,YAAY,CAAC,YAAY,CAAC,sBAAsB,CAAC,kCAAiB,qBAAqB,CAAC,kBAAkB,CAAC,kCAAkC,CAAC,eAAe,CAAC,YAAY,CAAC,SAAS,CAAC,wBAAO,eAAe,CAAC,kBAAkB,CAAC,iBAAiB,CAAC,8BAAa,qBAAqB,CAAC,iBAAiB,CAAC,kBAAkB,CAAC,gEAA8B,aAAa,CAAC,YAAY,CAAC,UAAU,CAAC,kCAAiB,wBAAwB,CAAC,WAAW,CAAC,iBAAiB,CAAC,UAAU,CAAC,cAAc,CAAC,eAAe,CAAC,gCAAe,SAAS,CAAC,2BAAU,qBAAqB,CAAC,iBAAiB,CAAC,WAAW,CAAC,UAAU,CAAC,cAAc,CAAC,QAAQ,CAAC,kBAAkB,CAAC,eAAe,CAAC,YAAY,CAAC,cAAc,CAAC,iBAAiB,CAAC,iBAAiB,CAAC,SAAS,CAAC,gCAAe,uDAAqC,CAAC,kBAAkB,CAAC,2BAAkB,GAAG,QAAQ,CAAC,SAAS,CAAC,GAAG,WAAW,CAAC,SAAS,CAAC,CAAC,4BAAmB,GAAG,WAAW,CAAC,SAAS,CAAC,GAAG,QAAQ,CAAC,SAAS,CAAC",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Register/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309441596,
+      "end": 1719309441596,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309441599,
+      "end": 1719309441599,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441600,
+      "end": 1719309441600,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309441600,
+      "end": 1719309441600,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309441601,
+      "end": 1719309441601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1719309441601,
+      "end": 1719309441601,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309441601,
+      "end": 1719309441601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441602,
+      "end": 1719309441602,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309441603,
+      "end": 1719309441603,
+      "order": "normal"
+    }
+  ]
+}

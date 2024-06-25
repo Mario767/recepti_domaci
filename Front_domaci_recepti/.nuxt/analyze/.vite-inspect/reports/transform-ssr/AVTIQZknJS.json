@@ -1,0 +1,274 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/FooterPublic.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent } from \"vue/server-renderer\"\n\nimport { ref } from 'vue';\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'FooterPublic',\n  __ssrInlineRender: true,\n  setup(__props) {\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_v_footer = _resolveComponent(\"v-footer\")!\n\n  _push(_ssrRenderComponent(_component_v_footer, _mergeProps({\n    class: \"footer\",\n    color: \"#C87C36\"\n  }, _attrs), null, _parent))\n}\n}\n\n})",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/FooterPublic.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\nimport { ref } from 'vue';\n\n\n</script>\n\n<template>\n  <v-footer class=\"footer\" color=\"#C87C36\">\n  </v-footer>\n</template>\n\n<style scoped>\n.footer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n}\n</style>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B;AACA;;;;;;AAHwB;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309448107,
+      "end": 1719309448107,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1719309448108,
+      "end": 1719309448108,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"FooterPublic\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_v_footer = _resolveComponent(\"v-footer\");\n      _push(_ssrRenderComponent(_component_v_footer, _mergeProps({\n        class: \"footer\",\n        color: \"#C87C36\"\n      }, _attrs), null, _parent));\n    };\n  }\n});\n",
+      "start": 1719309448109,
+      "end": 1719309448226,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/FooterPublic.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent } from \"vue/server-renderer\"\n\nimport { ref } from 'vue';\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'FooterPublic',\n  __ssrInlineRender: true,\n  setup(__props) {\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_v_footer = _resolveComponent(\"v-footer\")!\n\n  _push(_ssrRenderComponent(_component_v_footer, _mergeProps({\n    class: \"footer\",\n    color: \"#C87C36\"\n  }, _attrs), null, _parent))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,cAAc,mBAAmB;AACjF,SAAS,sBAAsB,2BAA2B;AAM1D,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,MAAM,SAAS;AAGjB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,sBAAsB,kBAAkB,UAAU;AAExD,YAAM,oBAAoB,qBAAqB,YAAY;AAAA,QACzD,OAAO;AAAA,QACP,OAAO;AAAA,MACT,GAAG,MAAM,GAAG,MAAM,OAAO,CAAC;AAAA,IAC5B;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309448226,
+      "end": 1719309448226,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309448226,
+      "end": 1719309448226,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1719309448226,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309448227,
+      "end": 1719309448227,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309448227,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309448227,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309448228,
+      "end": 1719309448228,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "resolvedId": "virtual:nuxt:C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/.nuxt/layouts.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "export default {\n  admin: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Admin.vue\").then(m => m.default || m),\n  adminlayout: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Adminlayout.vue\").then(m => m.default || m),\n  deserti: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Deserti.vue\").then(m => m.default || m),\n  dodajrecept: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Dodajrecept.vue\").then(m => m.default || m),\n  glavnajela: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Glavnajela.vue\").then(m => m.default || m),\n  login: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Login.vue\").then(m => m.default || m),\n  mojirecepti: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Mojirecepti.vue\").then(m => m.default || m),\n  odjavi: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Odjavi.vue\").then(m => m.default || m),\n  profil: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Profil.vue\").then(m => m.default || m),\n  recept: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Recept.vue\").then(m => m.default || m),\n  register: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Register.vue\").then(m => m.default || m),\n  search: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Search.vue\").then(m => m.default || m),\n  uredirecept: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Uredirecept.vue\").then(m => m.default || m),\n  default: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/default.vue\").then(m => m.default || m),\n  predjela: () => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/predjela.vue\").then(m => m.default || m)\n}",
+      "start": 1719309397505,
+      "end": 1719309397505,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309397505,
+      "end": 1719309397505,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309397505,
+      "end": 1719309397505,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309397505,
+      "end": 1719309397506,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309397506,
+      "end": 1719309397506,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309397506,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309397507,
+      "end": 1719309397507,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309397507,
+      "end": 1719309397508,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309397508,
+      "end": 1719309397508,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309397508,
+      "end": 1719309397508,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309397508,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309397510,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309397510,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1719309397510,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1719309397510,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309397510,
+      "end": 1719309397510,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309397510,
+      "end": 1719309397512,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper\";export default {\n  admin: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Admin.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  adminlayout: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Adminlayout.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  deserti: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Deserti.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  dodajrecept: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Dodajrecept.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  glavnajela: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Glavnajela.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  login: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Login.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  mojirecepti: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Mojirecepti.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  odjavi: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Odjavi.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  profil: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Profil.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  recept: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Recept.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  register: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Register.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  search: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Search.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  uredirecept: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/Uredirecept.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  default: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/default.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m),\n  predjela: () => __vitePreload(() => import(\"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/layouts/predjela.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n}",
+      "start": 1719309397512,
+      "end": 1719309397513,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309397513,
+      "end": 1719309397513,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue?vue&type=style&index=0&scoped=d36e7898&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n  .card-recepti {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n  }\n  \n  .card {\n    flex: 1 0 21%; /* Četiri kartice u jednom redu */\n    margin: 1.5%;\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease;\n    max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n  }\n  \n  .card img {\n    width: 100%;\n    height: 200px;\n    object-fit: cover;\n  }\n  \n  .card-body {\n    padding: 15px;\n   \n  }\n  \n  .card-title {\n    text-transform: uppercase;\n    font-style:oblique;\n    font-weight: bold;\n    color: #FF6347; /* Tomato */\n    text-shadow: 1px 1px #ff1b3d; /* Tomato */\n    font-size: 1.3rem; /* Smanjena veličina naslova */\n    margin-bottom: 5px; /* Smanjen razmak ispod naslova */\n  }\n  \n  .card-text {\n    margin-bottom: 5px;\n  }\n  \n  .prosjecna-ocjena {\n    margin-top: 5px;\n  }\n  \n  .star {\n    color: #ccc; /* Boja neaktivnih zvjezdica */\n  }\n  \n  .star-filled {\n    color: gold; /* Boja aktivnih zvjezdica */\n  }\n  \n  .ocjena {\n    margin-left: 5px; /* Razmak između zvjezdica i broja ocjene */\n  }\n  \n  .ocjena-title {\n    margin-right: 5px; /* Razmak između Ocjena i zvjezdica */\n  }\n  \n  @media (max-width: 1400px) {\n    .card {\n      flex: 1 0 31%; /* Tri kartice u jednom redu */\n      max-width: calc(100% / 3 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 992px) {\n    .card {\n      flex: 1 0 46%; /* Dvije kartice u jednom redu */\n      max-width: calc(100% / 2 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 576px) {\n    .card {\n      flex: 1 0 100%; /* Jedna kartica u jednom redu */\n      max-width: 100%; /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  .card-hover:hover {\n    transform: scale(1.05);\n  }\n  ",
+      "start": 1719309441259,
+      "end": 1719309441259,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n    <div class=\"card-recepti\">\n      <div v-for=\"recept in recepti\" :key=\"recept.recept_id\" class=\"card card-hover\" @click=\"goToRecept(recept)\">\n        <img :src=\"getImageUrl(recept.slika)\" alt=\"Recept slika\">\n        <div class=\"card-body\">\n          <h5 class=\"card-title\">{{ recept.naziv_recepta }}</h5>\n          <p class=\"card-text\">Autor: {{ recept.korisnicko_ime }}</p>\n          <div class=\"prosjecna-ocjena\">\n            <span v-if=\"recept.prosjecna_ocjena !== null && recept.prosjecna_ocjena !== undefined\" class=\"ocjena-title\">Ocjena:</span>\n            <template v-for=\"i in 5\">\n              <span v-if=\"i <= Math.floor(recept.prosjecna_ocjena)\" class=\"star-filled\" :key=\"'filled-'+i\">&#9733;</span>\n              <span v-else class=\"star\" :key=\"'empty-'+i\">&#9733;</span>\n            </template>\n            <span v-if=\"recept.prosjecna_ocjena !== null && recept.prosjecna_ocjena !== undefined\" class=\"ocjena\">{{ recept.prosjecna_ocjena }}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n  </template>\n  \n  <script>\n  export default {\n    props: {\n      recepti: {\n        type: Array,\n        required: true\n      }\n    },\n    \n    methods: {\n      getImageUrl(slika) {\n        return 'http://127.0.0.1:8000/' + slika;\n      },\n      goToRecept(recept) {\n        let formattedNaziv = recept.naziv_recepta.replace(/\\s+/g, '_'); // Zamjenjuje sve razmake s '_'\n        this.$router.push({ path: `/News/${formattedNaziv}` });\n        accountStore.actions.setReceptId(recept.recept_id); // Dodajte ovu liniju\n      }\n    }\n  };\n  </script>\n  \n  <style scoped>\n  .card-recepti {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n  }\n  \n  .card {\n    flex: 1 0 21%; /* Četiri kartice u jednom redu */\n    margin: 1.5%;\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease;\n    max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n  }\n  \n  .card img {\n    width: 100%;\n    height: 200px;\n    object-fit: cover;\n  }\n  \n  .card-body {\n    padding: 15px;\n   \n  }\n  \n  .card-title {\n    text-transform: uppercase;\n    font-style:oblique;\n    font-weight: bold;\n    color: #FF6347; /* Tomato */\n    text-shadow: 1px 1px #ff1b3d; /* Tomato */\n    font-size: 1.3rem; /* Smanjena veličina naslova */\n    margin-bottom: 5px; /* Smanjen razmak ispod naslova */\n  }\n  \n  .card-text {\n    margin-bottom: 5px;\n  }\n  \n  .prosjecna-ocjena {\n    margin-top: 5px;\n  }\n  \n  .star {\n    color: #ccc; /* Boja neaktivnih zvjezdica */\n  }\n  \n  .star-filled {\n    color: gold; /* Boja aktivnih zvjezdica */\n  }\n  \n  .ocjena {\n    margin-left: 5px; /* Razmak između zvjezdica i broja ocjene */\n  }\n  \n  .ocjena-title {\n    margin-right: 5px; /* Razmak između Ocjena i zvjezdica */\n  }\n  \n  @media (max-width: 1400px) {\n    .card {\n      flex: 1 0 31%; /* Tri kartice u jednom redu */\n      max-width: calc(100% / 3 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 992px) {\n    .card {\n      flex: 1 0 46%; /* Dvije kartice u jednom redu */\n      max-width: calc(100% / 2 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 576px) {\n    .card {\n      flex: 1 0 100%; /* Jedna kartica u jednom redu */\n      max-width: 100%; /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  .card-hover:hover {\n    transform: scale(1.05);\n  }\n  </style>\n  "
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441262,
+      "end": 1719309441262,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309441262,
+      "end": 1719309441262,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441264,
+      "end": 1719309441264,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309441264,
+      "end": 1719309441264,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309441265,
+      "end": 1719309441265,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".card-recepti{display:flex;flex-wrap:wrap;justify-content:space-between}.card{border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 4px rgba(0,0,0,.1);flex:1 0 21%;margin:1.5%;max-width:22%;transition:transform .3s ease}.card img{height:200px;-o-object-fit:cover;object-fit:cover;width:100%}.card-body{padding:15px}.card-title{color:tomato;font-size:1.3rem;font-style:oblique;font-weight:700;text-shadow:1px 1px #ff1b3d;text-transform:uppercase}.card-text,.card-title{margin-bottom:5px}.prosjecna-ocjena{margin-top:5px}.star{color:#ccc}.star-filled{color:gold}.ocjena{margin-left:5px}.ocjena-title{margin-right:5px}@media (max-width:1400px){.card{flex:1 0 31%;max-width:30.33333%}}@media (max-width:992px){.card{flex:1 0 46%;max-width:47%}}@media (max-width:576px){.card{flex:1 0 100%;max-width:100%}}.card-hover:hover{transform:scale(1.05)}",
+      "start": 1719309441265,
+      "end": 1719309441301,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue",
+        "mappings": "AACE,cACE,YAAa,CACb,cAAe,CACf,6BACF,CAEA,MAGE,qBAAsB,CACtB,iBAAkB,CAClB,mCAAwC,CAJxC,YAAa,CACb,WAAY,CAKZ,aAA8B,CAD9B,6BAEF,CAEA,UAEE,YAAa,CACb,mBAAiB,CAAjB,gBAAiB,CAFjB,UAGF,CAEA,WACE,YAEF,CAEA,YAIE,YAAc,CAEd,gBAAiB,CAJjB,kBAAkB,CAClB,eAAiB,CAEjB,2BAA4B,CAJ5B,wBAOF,CAEA,uBAHE,iBAKF,CAEA,kBACE,cACF,CAEA,MACE,UACF,CAEA,aACE,UACF,CAEA,QACE,eACF,CAEA,cACE,gBACF,CAEA,0BACE,MACE,YAAa,CACb,mBACF,CACF,CAEA,yBACE,MACE,YAAa,CACb,aACF,CACF,CAEA,yBACE,MACE,aAAc,CACd,cACF,CACF,CAEA,kBACE,qBACF",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue"
+        ],
+        "sourcesContent": [
+          "\n  .card-recepti {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: space-between;\n  }\n  \n  .card {\n    flex: 1 0 21%; /* Četiri kartice u jednom redu */\n    margin: 1.5%;\n    border: 1px solid #ccc;\n    border-radius: 5px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    transition: transform 0.3s ease;\n    max-width: calc(100% / 4 - 3%); /* Ograničava maksimalnu širinu kartice */\n  }\n  \n  .card img {\n    width: 100%;\n    height: 200px;\n    object-fit: cover;\n  }\n  \n  .card-body {\n    padding: 15px;\n   \n  }\n  \n  .card-title {\n    text-transform: uppercase;\n    font-style:oblique;\n    font-weight: bold;\n    color: #FF6347; /* Tomato */\n    text-shadow: 1px 1px #ff1b3d; /* Tomato */\n    font-size: 1.3rem; /* Smanjena veličina naslova */\n    margin-bottom: 5px; /* Smanjen razmak ispod naslova */\n  }\n  \n  .card-text {\n    margin-bottom: 5px;\n  }\n  \n  .prosjecna-ocjena {\n    margin-top: 5px;\n  }\n  \n  .star {\n    color: #ccc; /* Boja neaktivnih zvjezdica */\n  }\n  \n  .star-filled {\n    color: gold; /* Boja aktivnih zvjezdica */\n  }\n  \n  .ocjena {\n    margin-left: 5px; /* Razmak između zvjezdica i broja ocjene */\n  }\n  \n  .ocjena-title {\n    margin-right: 5px; /* Razmak između Ocjena i zvjezdica */\n  }\n  \n  @media (max-width: 1400px) {\n    .card {\n      flex: 1 0 31%; /* Tri kartice u jednom redu */\n      max-width: calc(100% / 3 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 992px) {\n    .card {\n      flex: 1 0 46%; /* Dvije kartice u jednom redu */\n      max-width: calc(100% / 2 - 3%); /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  @media (max-width: 576px) {\n    .card {\n      flex: 1 0 100%; /* Jedna kartica u jednom redu */\n      max-width: 100%; /* Ograničava maksimalnu širinu kartice */\n    }\n  }\n  \n  .card-hover:hover {\n    transform: scale(1.05);\n  }\n  "
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309441301,
+      "end": 1719309441301,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309441301,
+      "end": 1719309441301,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309441301,
+      "end": 1719309441301,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".card-recepti[data-v-d36e7898]{display:flex;flex-wrap:wrap;justify-content:space-between}.card[data-v-d36e7898]{border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 4px rgba(0,0,0,.1);flex:1 0 21%;margin:1.5%;max-width:22%;transition:transform .3s ease}.card img[data-v-d36e7898]{height:200px;-o-object-fit:cover;object-fit:cover;width:100%}.card-body[data-v-d36e7898]{padding:15px}.card-title[data-v-d36e7898]{color:tomato;font-size:1.3rem;font-style:oblique;font-weight:700;text-shadow:1px 1px #ff1b3d;text-transform:uppercase}.card-text[data-v-d36e7898],.card-title[data-v-d36e7898]{margin-bottom:5px}.prosjecna-ocjena[data-v-d36e7898]{margin-top:5px}.star[data-v-d36e7898]{color:#ccc}.star-filled[data-v-d36e7898]{color:gold}.ocjena[data-v-d36e7898]{margin-left:5px}.ocjena-title[data-v-d36e7898]{margin-right:5px}@media (max-width:1400px){.card[data-v-d36e7898]{flex:1 0 31%;max-width:30.33333%}}@media (max-width:992px){.card[data-v-d36e7898]{flex:1 0 46%;max-width:47%}}@media (max-width:576px){.card[data-v-d36e7898]{flex:1 0 100%;max-width:100%}}.card-hover[data-v-d36e7898]:hover{transform:scale(1.05)}",
+      "start": 1719309441301,
+      "end": 1719309441303,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue",
+        "mappings": "AAAA,+BAAc,YAAY,CAAC,cAAc,CAAC,6BAA6B,CAAC,uBAAM,qBAAqB,CAAC,iBAAiB,CAAC,mCAAmC,CAAC,YAAY,CAAC,WAAW,CAAC,aAAa,CAAC,6BAA6B,CAAC,2BAAU,YAAY,CAAC,mBAAmB,CAAC,gBAAgB,CAAC,UAAU,CAAC,4BAAW,YAAY,CAAC,6BAAY,YAAY,CAAC,gBAAgB,CAAC,kBAAkB,CAAC,eAAe,CAAC,2BAA2B,CAAC,wBAAwB,CAAC,yDAAuB,iBAAiB,CAAC,mCAAkB,cAAc,CAAC,uBAAM,UAAU,CAAC,8BAAa,UAAU,CAAC,yBAAQ,eAAe,CAAC,+BAAc,gBAAgB,CAAC,0BAA0B,uBAAM,YAAY,CAAC,mBAAmB,CAAC,CAAC,yBAAyB,uBAAM,YAAY,CAAC,aAAa,CAAC,CAAC,yBAAyB,uBAAM,aAAa,CAAC,cAAc,CAAC,CAAC,mCAAkB,qBAAqB",
+        "names": [],
+        "sources": [
+          "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/components/HomeRecepti.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309441303,
+      "end": 1719309441303,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441303,
+      "end": 1719309441303,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441303,
+      "end": 1719309441303,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441304,
+      "end": 1719309441304,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309441304,
+      "end": 1719309441304,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441304,
+      "end": 1719309441304,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309441305,
+      "end": 1719309441305,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309441305,
+      "end": 1719309441305,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309441305,
+      "end": 1719309441305,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309441306,
+      "end": 1719309441306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1719309441306,
+      "end": 1719309441306,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309441306,
+      "end": 1719309441306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309441306,
+      "end": 1719309441306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309441306,
+      "end": 1719309441306,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309441307,
+      "end": 1719309441307,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441307,
+      "end": 1719309441308,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309441307,
+      "end": 1719309441308,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1719309441308,
+      "end": 1719309441308,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309441308,
+      "end": 1719309441308,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309441308,
+      "end": 1719309441308,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309441308,
+      "end": 1719309441308,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309441308,
+      "end": 1719309441308,
+      "order": "normal"
+    }
+  ]
+}

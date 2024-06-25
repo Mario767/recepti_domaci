@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Login/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div id=\"app\" v-cloak>\n    <div v-if=\"isCheckingLogin\">\n      <h1>Provjera prijave...</h1>\n    </div>\n    <div v-else>\n      <div v-if=\"isLoggedIn\">\n        <h1>Prijavljeni ste</h1>\n      </div>\n      <div class=\"login-container\" v-else>\n        <h1 class=\"title\">Domaći recepti</h1>\n        <input class=\"input-field\" type=\"text\" placeholder=\"Unesi ime\" v-model=\"korisnicko_ime\" :disabled=\"isCheckingLogin\" required />\n        <p v-if=\"errors.korisnicko_ime\" class=\"error-message\">{{ errors.korisnicko_ime }}</p>\n\n        <input class=\"input-field\" type=\"password\" placeholder=\"Unesi lozinku\" v-model=\"lozinka\" :disabled=\"isCheckingLogin\" required />\n        <p v-if=\"errors.lozinka\" class=\"error-message\">{{ errors.lozinka }}</p>\n\n        <button class=\"login-button\" @click.prevent=\"prijavi\" :disabled=\"isCheckingLogin\">Prijavi se</button>\n        <p v-if=\"errors.general\" class=\"error-message\">{{ errors.general }}</p>\n        <div class=\"register-container\">\n          <p>Nemaš račun? <router-link to=\"/register\" class=\"register-button\">Registriraj se</router-link></p>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { nextTick } from 'vue';\nimport accountStore from '@/composables/accountStore'; \n\nexport default {\n  data() {\n    return {\n      korisnicko_ime: '',\n      lozinka: '',\n      isLoggedIn: false,\n      isCheckingLogin: true,\n      errors: {\n        korisnicko_ime: '',\n        lozinka: '',\n        general: ''\n      }\n    }\n  },\n  async created() {\n    try {\n      this.isLoggedIn = await accountStore.getters.isLoggedIn();\n      if (this.isLoggedIn) {\n        await nextTick();\n        window.location.href = '/';\n      }\n    } catch (error) {\n      console.error('Error during login check:', error);\n    } finally {\n      this.isCheckingLogin = false;\n    }\n  },\n  methods: {\n    async prijavi() {\n      if (this.isCheckingLogin) return;\n\n      // Reset errors\n      this.errors = { korisnicko_ime: '', lozinka: '', general: '' };\n\n      // Frontend validation\n      if (!this.korisnicko_ime) {\n        this.errors.korisnicko_ime = 'Korisničko ime je obavezno';\n      }\n      if (!this.lozinka) {\n        this.errors.lozinka = 'Lozinka je obavezna';\n      }\n      if (this.errors.korisnicko_ime || this.errors.lozinka) {\n        return;\n      }\n\n      try {\n        await fetch('http://localhost:8000/sanctum/csrf-cookie');\n        const response = await fetch('http://localhost:8000/api/prijavi', {\n          method: 'POST',\n          headers: {\n            'Content-Type': 'application/json'\n          },\n          body: JSON.stringify({\n            korisnicko_ime: this.korisnicko_ime,\n            lozinka: this.lozinka\n          })\n        });\n        const data = await response.json();\n        if (response.ok) {\n          document.cookie = `authToken=${data.access_token}; path=/`;\n          document.cookie = `username=${this.korisnicko_ime}; path=/`;\n          document.cookie = `email=${data.korisnik.email}; path=/`;\n          this.isLoggedIn = true;\n          await nextTick();\n          if (data.korisnik.uloga_id == 2 || data.korisnik.uloga_id ) {\n            window.location.href = '/admin';\n          } else {\n            window.location.href = '/';\n          }\n        } else {\n          this.errors = data.errors || {};\n        }\n      } catch (error) {\n        this.errors.general = 'Došlo je do greške prilikom prijave: ' + error.message;\n        console.error('Detalji greške: ', error);\n      }\n    }\n  }\n}\n</script>\n\n<style scoped>\nbody {\n  background-color: #FFA07A;\n}\n\n#app {\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.login-container {\n  background-color: white;\n  padding: 20px;\n  border-radius: 10px;\n  width: 100%;\n  max-width: 500px;\n  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);\n}\n\n.title {\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1.5em;\n}\n\n.input-field {\n  width: 100%;\n  padding: 15px;\n  margin-bottom: 10px;\n  border-radius: 5px;\n  border: 1px solid #ccc;\n  font-size: 1em;\n}\n\n.login-button {\n  width: 100%;\n  padding: 15px;\n  background-color: #FFA07A;\n  color: white;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  font-size: 1em;\n  margin-top: 10px;\n}\n\n.register-container {\n  margin-top: 10px;\n  text-align: center;\n}\n\n.register-button {\n  color: #FFA07A;\n  text-decoration: none;\n}\n\n.error-message {\n  color: red;\n  margin-bottom: 10px;\n}\n\n[v-cloak] {\n  display: none;\n}\n</style>\n",
+      "start": 1719309404202,
+      "end": 1719309404456,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1719309404456,
+      "end": 1719309404456,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { nextTick } from 'vue';\nimport accountStore from '@/composables/accountStore'; \n\nconst _sfc_main = {\n  data() {\n    return {\n      korisnicko_ime: '',\n      lozinka: '',\n      isLoggedIn: false,\n      isCheckingLogin: true,\n      errors: {\n        korisnicko_ime: '',\n        lozinka: '',\n        general: ''\n      }\n    }\n  },\n  async created() {\n    try {\n      this.isLoggedIn = await accountStore.getters.isLoggedIn();\n      if (this.isLoggedIn) {\n        await nextTick();\n        window.location.href = '/';\n      }\n    } catch (error) {\n      console.error('Error during login check:', error);\n    } finally {\n      this.isCheckingLogin = false;\n    }\n  },\n  methods: {\n    async prijavi() {\n      if (this.isCheckingLogin) return;\n\n      // Reset errors\n      this.errors = { korisnicko_ime: '', lozinka: '', general: '' };\n\n      // Frontend validation\n      if (!this.korisnicko_ime) {\n        this.errors.korisnicko_ime = 'Korisničko ime je obavezno';\n      }\n      if (!this.lozinka) {\n        this.errors.lozinka = 'Lozinka je obavezna';\n      }\n      if (this.errors.korisnicko_ime || this.errors.lozinka) {\n        return;\n      }\n\n      try {\n        await fetch('http://localhost:8000/sanctum/csrf-cookie');\n        const response = await fetch('http://localhost:8000/api/prijavi', {\n          method: 'POST',\n          headers: {\n            'Content-Type': 'application/json'\n          },\n          body: JSON.stringify({\n            korisnicko_ime: this.korisnicko_ime,\n            lozinka: this.lozinka\n          })\n        });\n        const data = await response.json();\n        if (response.ok) {\n          document.cookie = `authToken=${data.access_token}; path=/`;\n          document.cookie = `username=${this.korisnicko_ime}; path=/`;\n          document.cookie = `email=${data.korisnik.email}; path=/`;\n          this.isLoggedIn = true;\n          await nextTick();\n          if (data.korisnik.uloga_id == 2 || data.korisnik.uloga_id ) {\n            window.location.href = '/admin';\n          } else {\n            window.location.href = '/';\n          }\n        } else {\n          this.errors = data.errors || {};\n        }\n      } catch (error) {\n        this.errors.general = 'Došlo je do greške prilikom prijave: ' + error.message;\n        console.error('Detalji greške: ', error);\n      }\n    }\n  }\n}\n\nimport { createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, vModelText as _vModelText, withDirectives as _withDirectives, toDisplayString as _toDisplayString, withModifiers as _withModifiers, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-fbb93576\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { id: \"app\" }\nconst _hoisted_2 = { key: 0 }\nconst _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", null, \"Provjera prijave...\", -1))\nconst _hoisted_4 = [\n  _hoisted_3\n]\nconst _hoisted_5 = { key: 1 }\nconst _hoisted_6 = { key: 0 }\nconst _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", null, \"Prijavljeni ste\", -1))\nconst _hoisted_8 = [\n  _hoisted_7\n]\nconst _hoisted_9 = {\n  key: 1,\n  class: \"login-container\"\n}\nconst _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", { class: \"title\" }, \"Domaći recepti\", -1))\nconst _hoisted_11 = [\"disabled\"]\nconst _hoisted_12 = {\n  key: 0,\n  class: \"error-message\"\n}\nconst _hoisted_13 = [\"disabled\"]\nconst _hoisted_14 = {\n  key: 1,\n  class: \"error-message\"\n}\nconst _hoisted_15 = [\"disabled\"]\nconst _hoisted_16 = {\n  key: 2,\n  class: \"error-message\"\n}\nconst _hoisted_17 = { class: \"register-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_router_link = _resolveComponent(\"router-link\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    ($data.isCheckingLogin)\n      ? (_openBlock(), _createElementBlock(\"div\", _hoisted_2, _hoisted_4))\n      : (_openBlock(), _createElementBlock(\"div\", _hoisted_5, [\n          ($data.isLoggedIn)\n            ? (_openBlock(), _createElementBlock(\"div\", _hoisted_6, _hoisted_8))\n            : (_openBlock(), _createElementBlock(\"div\", _hoisted_9, [\n                _hoisted_10,\n                _withDirectives(_createElementVNode(\"input\", {\n                  class: \"input-field\",\n                  type: \"text\",\n                  placeholder: \"Unesi ime\",\n                  \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.korisnicko_ime) = $event)),\n                  disabled: $data.isCheckingLogin,\n                  required: \"\"\n                }, null, 8, _hoisted_11), [\n                  [_vModelText, $data.korisnicko_ime]\n                ]),\n                ($data.errors.korisnicko_ime)\n                  ? (_openBlock(), _createElementBlock(\"p\", _hoisted_12, _toDisplayString($data.errors.korisnicko_ime), 1))\n                  : _createCommentVNode(\"\", true),\n                _withDirectives(_createElementVNode(\"input\", {\n                  class: \"input-field\",\n                  type: \"password\",\n                  placeholder: \"Unesi lozinku\",\n                  \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.lozinka) = $event)),\n                  disabled: $data.isCheckingLogin,\n                  required: \"\"\n                }, null, 8, _hoisted_13), [\n                  [_vModelText, $data.lozinka]\n                ]),\n                ($data.errors.lozinka)\n                  ? (_openBlock(), _createElementBlock(\"p\", _hoisted_14, _toDisplayString($data.errors.lozinka), 1))\n                  : _createCommentVNode(\"\", true),\n                _createElementVNode(\"button\", {\n                  class: \"login-button\",\n                  onClick: _cache[2] || (_cache[2] = _withModifiers((...args) => ($options.prijavi && $options.prijavi(...args)), [\"prevent\"])),\n                  disabled: $data.isCheckingLogin\n                }, \"Prijavi se\", 8, _hoisted_15),\n                ($data.errors.general)\n                  ? (_openBlock(), _createElementBlock(\"p\", _hoisted_16, _toDisplayString($data.errors.general), 1))\n                  : _createCommentVNode(\"\", true),\n                _createElementVNode(\"div\", _hoisted_17, [\n                  _createElementVNode(\"p\", null, [\n                    _createTextVNode(\"Nemaš račun? \"),\n                    _createVNode(_component_router_link, {\n                      to: \"/register\",\n                      class: \"register-button\"\n                    }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Registriraj se\")\n                      ]),\n                      _: 1\n                    })\n                  ])\n                ])\n              ]))\n        ]))\n  ]))\n}\n\nimport \"C:/Users/mario/Documents/Projekti web/Recepti/Front_domaci_recepti/pages/Login/index.vue?vue&type=style&index=0&scoped=fbb93576&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-fbb93576\"]])",
+      "start": 1719309404456,
+      "end": 1719309404460,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1719309404460,
+      "end": 1719309404460,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309404460,
+      "end": 1719309404460,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1719309404460,
+      "end": 1719309404460,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1719309404461,
+      "end": 1719309404461,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1719309404462,
+      "end": 1719309404462,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1719309404462,
+      "end": 1719309404464,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1719309404464,
+      "end": 1719309404464,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1719309404464,
+      "end": 1719309404464,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1719309404464,
+      "end": 1719309404464,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1719309404464,
+      "end": 1719309404464,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1719309404464,
+      "end": 1719309404465,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1719309404465,
+      "end": 1719309404465,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1719309404465,
+      "end": 1719309404465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1719309404465,
+      "end": 1719309404465,
+      "order": "normal"
+    }
+  ]
+}
