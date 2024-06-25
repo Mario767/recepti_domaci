@@ -1,5 +1,0 @@
-const index_vue_vue_type_style_index_0_scoped_33c1310a_lang = "body[data-v-33c1310a]{background-color:#ffa07a}#app[data-v-33c1310a]{align-items:center;display:flex;height:100vh;justify-content:center}.container[data-v-33c1310a]{background-color:#fff;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1);max-width:500px;padding:20px;width:80%}.title[data-v-33c1310a]{font-size:1.5em;margin-bottom:20px;text-align:center}.button-row[data-v-33c1310a]{display:flex;width:100%}.button[data-v-33c1310a]{background-color:#ffa07a;border:none;border-radius:8px;color:#fff;cursor:pointer;font-size:1em;margin:10px;padding:10px;width:100%}.button[data-v-33c1310a]:hover{box-shadow:0 0 4px 0 dimgray}.logout-row[data-v-33c1310a]{display:flex;justify-content:center}.logout-button[data-v-33c1310a]{background-color:#ffa07a;border:none;border-radius:5px;color:#fff;cursor:pointer;font-size:1em;padding:20px;width:100%}.logout-button[data-v-33c1310a]:hover{box-shadow:0 0 4px 0 dimgray}";
-export {
-  index_vue_vue_type_style_index_0_scoped_33c1310a_lang as default
-};
-//# sourceMappingURL=index-styles-1.mjs-020499a4.js.map
