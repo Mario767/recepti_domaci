@@ -141,7 +141,7 @@ class ReceiptController extends Controller
 
         // Fetching the average rating
         $prosjecnaOcjena = Ocjena::where('recept_id', $id)->avg('ocjena');
-        $prosjecnaOcjena = round($prosjecnaOcjena, 1); // Rounding to one decimal place
+        $prosjecnaOcjena = round($prosjecnaOcjena, 2); // Rounding to one decimal place
 
         // Adding the average rating to the response
         $recept->prosjecnaOcjena = $prosjecnaOcjena;
