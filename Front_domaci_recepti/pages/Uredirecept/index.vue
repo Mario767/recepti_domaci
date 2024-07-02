@@ -92,7 +92,7 @@ export default {
 
       const authToken = document.cookie.replace(/(?:(?:^|.*;\s*)authToken\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
-      axios.post('http://localhost:8000/api/updaterec', formData, {
+      axios.post('http://pzi202024.studenti.sum.ba/backend/api/updaterec', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             'Authorization': `Bearer ${authToken}`
@@ -106,7 +106,7 @@ export default {
         });
     },
     getReceptData(id_recepta) {
-      axios.get(`http://127.0.0.1:8000/api/dohvatirec/${id_recepta}`)
+      axios.get(`http://pzi202024.studenti.sum.ba/backend/api/dohvatirec/${id_recepta}`)
         .then(response => {
           this.originalRecept = response.data;
           this.nazivRecepta = response.data.naziv_recepta;

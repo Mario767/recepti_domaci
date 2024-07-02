@@ -9,6 +9,7 @@
       <div class="form-group">
         <label for="opis">Opis:</label>
         <textarea id="opis" v-model="opis" maxlength="1000" required></textarea>
+        <span v-if="opisError" style="color: red;">{{ opisError }}</span>
       </div>
       <div class="form-group">
         <label for="slika">Slika:</label>
@@ -29,6 +30,7 @@
   </div>
 </template>
 
+
 <script>
 import axios from 'axios';
 
@@ -40,7 +42,8 @@ export default {
       slika: null,
       vrstaJela: null,
       slikaTooLarge: false,
-      slikaInvalidFormat: false
+      slikaInvalidFormat: false,
+      opisError: '' // Dodajemo polje za prikaz greške za opis
     };
   },
   methods: {
@@ -66,7 +69,12 @@ export default {
       this.slikaInvalidFormat = false;
       this.slika = file;
     },
-    submitForm() {
+    async submitForm() {
+      if (this.opis.length > 1000) {
+        this.opisError = 'Ne možete unijeti više od 1000 znakova za opis'; // Postavi poruku za prekoračenje dužine opisa
+        return; // Prekini funkciju ako je opis predugačak
+      }
+
       const formData = new FormData();
       formData.append('naziv_recepta', this.nazivRecepta);
       formData.append('opis', this.opis);
@@ -75,23 +83,29 @@ export default {
 
       const authToken = document.cookie.replace(/(?:(?:^|.*;\s*)authToken\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
-      axios.post('http://localhost:8000/api/recepti', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          'Authorization': `Bearer ${authToken}`
-        }
-      })
-      .then(() => {
+      try {
+        await axios.post('http://pzi202024.studenti.sum.ba/backend/api/recepti', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            'Authorization': `Bearer ${authToken}`
+          }
+        });
         // Uspješno spremanje recepta, preusmjeri korisnika na /mojirecepti
         this.$router.push('/mojirecepti');
-      })
-      .catch(error => {
-        console.error('Došlo je do greške prilikom spremanja recepta:', error);
-      });
+      } catch (error) {
+        if (error.response && error.response.status === 422) {
+          // Ako je greška 422 (neispravan unos), prikaži poruku za opis
+          this.opisError = 'Ne možete uneti više od 1000 znakova za opis';
+        } else {
+          console.error('Došlo je do greške prilikom spremanja recepta:', error);
+        }
+      }
     }
   }
 };
 </script>
+
+
 
 <style scoped>
 .form-group {

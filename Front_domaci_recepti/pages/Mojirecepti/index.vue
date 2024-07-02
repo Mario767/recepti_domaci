@@ -14,7 +14,7 @@
   import Mojirec from '@/components/Mojirec.vue';
   
   // Postavljanje osnovnog URL-a za Axios unutar komponente
-  axios.defaults.baseURL = 'http://127.0.0.1:8000/'; // Promijenjen osnovni URL
+  axios.defaults.baseURL = 'http://pzi202024.studenti.sum.ba/backend/'; // Promijenjen osnovni URL
   
   export default {
     components: {

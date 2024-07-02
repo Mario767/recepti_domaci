@@ -136,7 +136,7 @@ const validateForm = () => {
 const sendConfirmationCode = async () => {
   if (validateForm()) {
     try {
-      const response = await axios.post('http://localhost:8000/api/sendcode', {
+      const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/sendcode', {
         korisnicko_ime: korisnicko_ime.value,
         email: email.value,
         lozinka: lozinka.value,
@@ -173,7 +173,7 @@ const sendConfirmationCode = async () => {
 
 const confirmCode = async () => {
   try {
-    const response = await axios.post('http://localhost:8000/api/confirmcode', {
+    const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/confirmcode', {
       confirmationCode: confirmationCode.value,
       korisnicko_ime: korisnicko_ime.value,
       lozinka: lozinka.value,
@@ -205,7 +205,7 @@ const confirmCode = async () => {
 
 const resendConfirmationCode = async () => {
   try {
-    const response = await axios.post('http://localhost:8000/api/sendcode', {
+    const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/sendcode', {
       korisnicko_ime: korisnicko_ime.value,
       lozinka: lozinka.value,
       email: email.value,

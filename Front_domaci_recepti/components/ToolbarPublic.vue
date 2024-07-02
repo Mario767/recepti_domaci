@@ -65,11 +65,12 @@ watch(() => router.currentRoute.value.path, () => {
       <nuxt-link v-if="!isMobile && isAppInitialized" to="/" class="dm" style="margin-left: 10px">Domaći recepti</nuxt-link>
     </div>
     <v-spacer class="mb-8" />
-    <div v-if="!isMobile && isAppInitialized">
-      <nuxt-link to="/predjela" class="t1" style="margin: 0">Predjela</nuxt-link>
-      <nuxt-link to="/glavnajela" class="t1">Glavna jela</nuxt-link>
-      <nuxt-link to="/deserti" class="t1">Deserti</nuxt-link>
-    </div>
+    <div v-if="!isMobile && isAppInitialized" class="links-container">
+  <nuxt-link to="/predjela" class="t1">Predjela</nuxt-link>
+  <nuxt-link to="/glavnajela" class="t1">Glavna jela</nuxt-link>
+  <nuxt-link to="/deserti" class="t1">Deserti</nuxt-link>
+</div>
+
     <v-spacer />
     <div v-if="!isMobile && isAppInitialized" class="vl" style="display: flex; align-items: center; font-size: 1.7em">
       <nuxt-link style="padding-right: 10px" to="/search">
@@ -121,7 +122,7 @@ watch(() => router.currentRoute.value.path, () => {
   font-size: 22px;
   font-style: normal;
   line-height: normal;
-  margin-left: 20px;
+  margin: 0 10px; /* Održava razmake između linkova */
 }
 
 .t1:hover {
@@ -138,7 +139,43 @@ watch(() => router.currentRoute.value.path, () => {
 }
 
 .vl {
+  display: flex;
+  align-items: center;
+  font-size: 1.7em;
   margin-right: 2rem;
-  width: 5rem;
+  width: auto;
+}
+
+.app-bar {
+  z-index: 1000; /* Zadrži app-bar na vrhu */
+}
+
+.app-bar-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo {
+  max-height: 80px;
+}
+
+.links-container {
+  display: flex;
+  gap: 10px; /* Razmak između linkova */
+}
+
+@media (max-width: 1024px) {
+  .t1 {
+    margin: 0 5px; /* Smanji margine na manjim ekranima */
+  }
+
+  .links-container {
+    display: none; /* Sakrij linkove na manjim ekranima */
+  }
+
+  .vl {
+    display: none; /* Sakrij profile ikone na manjim ekranima */
+  }
 }
 </style>

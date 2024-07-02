@@ -5,7 +5,7 @@
     <hr style="height: 1px; color: black; width: 100%">
 
     <div class="slika-container">
-      <img :src="'http://127.0.0.1:8000/' + recept.slika" alt="Slika recepta">
+      <img :src="'http://pzi202024.studenti.sum.ba/backend/' + recept.slika" alt="Slika recepta">
     </div>
     <h2 class="opis">{{ recept.opis }}</h2>
 
@@ -83,7 +83,7 @@ export default {
     },
     submitRating(rating) {
       const authToken = cookies.get('authToken');
-      axios.post('http://127.0.0.1:8000/api/ocjena', {
+      axios.post('http://pzi202024.studenti.sum.ba/backend/api/ocjena', {
         recept_id: this.recept.recept_id,
         ocjena: rating
       }, {
@@ -101,7 +101,7 @@ export default {
     },
     submitKomentar() {
       const authToken = cookies.get('authToken');
-      axios.post('http://127.0.0.1:8000/api/komentari', {
+      axios.post('http://pzi202024.studenti.sum.ba/backend/api/komentari', {
         idrecepta: this.recept.recept_id,
         sadržaj: this.noviKomentar
       }, {

@@ -29,7 +29,7 @@ export default {
   
   methods: {
     getImageUrl(slika) {
-      return 'http://127.0.0.1:8000/' + slika;
+      return 'http://pzi202024.studenti.sum.ba/backend/' + slika;
     },
     goToRecept(recept) {
       let formattedNaziv = recept.naziv_recepta.replace(/\s+/g, '_'); // Zamjenjuje sve razmake s '_'
@@ -38,7 +38,7 @@ export default {
     },
     deleteRecept(receptId) {
       const authToken = cookies.get('authToken');
-      axios.post('http://127.0.0.1:8000/api/obrisirec', {
+      axios.post('http://pzi202024.studenti.sum.ba/backend/api/obrisirec', {
         recept_id: receptId,
       }, {
         headers: {

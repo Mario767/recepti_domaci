@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     fetchData(page) {
-      axios.get(`http://127.0.0.1:8000/api/dohvatirec?page=${page}`)
+      axios.get(`http://pzi202024.studenti.sum.ba/backend/api/dohvatirec?page=${page}`)
         .then(response => {
           this.recepti = response.data.recepti;
         })

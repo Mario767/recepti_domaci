@@ -2,8 +2,8 @@
   <div id="app">
     <div class="search-form">
       <form @submit.prevent="fetchData">
-        <input v-model="naziv_recepta" type="text" placeholder="Unesite naziv recepta">
-        <button type="submit">Pretraži</button>
+        <input v-model="naziv_recepta" type="text" placeholder="Unesite naziv recepta" class="responsive-input">
+        <button type="submit" class="responsive-button">Pretraži</button>
       </form>
     </div>
     <CardRecepti :recepti="recepti && recepti.recepti ? recepti.recepti.data : []" />
@@ -14,6 +14,10 @@
       <button class="pagination-button" v-if="recepti && recepti.recepti && recepti.recepti.last_page > recepti.recepti.current_page" @click="fetchData(recepti.recepti.current_page + 1)">Next</button>
     </div>
     <p v-if="error">{{ error }}</p>
+
+    <footer class="footer">
+      <p>&copy; 2024 Vaše ime. Sva prava pridržana.</p>
+    </footer>
   </div>
 </template>
 
@@ -34,16 +38,20 @@ export default {
   },
   methods: {
     fetchData(page = 1) {
-      axios.get(`http://127.0.0.1:8000/api/search/${this.naziv_recepta}?page=${page}`) // Dodajte parametar stranice
+      axios.get(`http://pzi202024.studenti.sum.ba/backend/api/search/${this.naziv_recepta}?page=${page}`) // Dodajte parametar stranice
         .then(response => {
           this.recepti = response.data;
           console.log(this.recepti)
         })
-        
+        .catch(error => {
+          this.error = 'Došlo je do greške prilikom dohvaćanja podataka';
+          console.log(error);
+        });
     }
   }
 };
 </script>
+
 <style scoped>
 .search-form {
   display: flex;
@@ -57,6 +65,7 @@ export default {
   padding: 0.5rem;
   border-radius: 1rem;
   width: 50%;
+  box-sizing: border-box; /* Dodano za uključivanje padding-a i border-a u ukupnu širinu */
 }
 
 .search-form input {
@@ -64,6 +73,7 @@ export default {
   border: none;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  box-sizing: border-box; /* Dodano za uključivanje padding-a i border-a u ukupnu širinu */
 }
 
 .search-form button {
@@ -77,11 +87,13 @@ export default {
   font-size: 16px;
   border-radius: 1rem;
   cursor: pointer;
+  box-sizing: border-box; /* Dodano za uključivanje padding-a i border-a u ukupnu širinu */
 }
 
 .pagination {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .pagination-button {
@@ -90,5 +102,43 @@ export default {
   border: none;
   padding: 0.7rem;
   border-radius: 10%;
+  margin: 0 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f8f8f8;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .search-form form {
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .search-form input {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+  }
+
+  .search-form button {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  .pagination-button {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
 }
 </style>

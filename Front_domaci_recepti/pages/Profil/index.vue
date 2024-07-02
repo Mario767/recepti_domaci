@@ -51,7 +51,7 @@ export default {
       // Provjeri je li korisnik prijavljen
       if (accountStore.getters.isLoggedIn()) {
         // Odjavi korisnika na backendu
-        axios.post('http://localhost:8000/api/odjavi', {}, {
+        axios.post('http://pzi202024.studenti.sum.ba/backend/api/odjavi', {}, {
           headers: {
             'Authorization': `Bearer ${authToken}`
           }

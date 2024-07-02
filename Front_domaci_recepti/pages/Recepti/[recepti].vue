@@ -28,7 +28,7 @@
           receptId = receptId || sessionStorage.getItem('receptId');
         }
        
-        axios.get(`http://127.0.0.1:8000/api/recept/${receptId}`)
+        axios.get(`http://pzi202024.studenti.sum.ba/backend/api/recept/${receptId}`)
           .then(response => {
             this.recept = response.data;
           })

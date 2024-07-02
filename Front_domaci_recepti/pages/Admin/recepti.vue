@@ -21,7 +21,7 @@
       })
     
     // Postavljanje osnovnog URL-a za Axios unutar komponente
-    axios.defaults.baseURL = 'http://127.0.0.1:8000/'; // Promijenjen osnovni URL
+    axios.defaults.baseURL = 'http://pzi202024.studenti.sum.ba/backend/'; // Promijenjen osnovni URL
     
     export default {
       components: {
@@ -45,7 +45,7 @@
         }
        
       
-        axios.get(`http://127.0.0.1:8000/api/receptikorisnika/${korisnikId}?page=${page}`, { // Dodajte korisnik_id u URL
+        axios.get(`http://pzi202024.studenti.sum.ba/backend/api/receptikorisnika/${korisnikId}?page=${page}`, { // Dodajte korisnik_id u URL
           headers: {
             'Authorization': `Bearer ${authToken}`
           }

@@ -12,7 +12,7 @@
 import axios from 'axios';
 import HomeRecepti from '@/components/HomeRecepti.vue';
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/';
+axios.defaults.baseURL = 'http://pzi202024.studenti.sum.ba/backend/';
 
 export default {
   components: {

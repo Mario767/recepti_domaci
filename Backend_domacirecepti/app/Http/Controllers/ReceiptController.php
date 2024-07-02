@@ -159,7 +159,7 @@ class ReceiptController extends Controller
             $jela = Recept::where('vrstajela', $kategorija)
                 ->with('korisnik:korisnik_id,korisnicko_ime')
                 ->withCount(['ocjene as prosjecna_ocjena' => function ($query) {
-                    $query->select(DB::raw('coalesce(round(avg(ocjena), 1),0)'));
+                    $query->select(DB::raw('coalesce(round(avg(ocjena), 2),0)'));
                 }])
                 ->orderBy('prosjecna_ocjena', 'desc')
                 ->orderBy('created_at', 'desc')

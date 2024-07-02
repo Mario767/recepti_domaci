@@ -12,7 +12,7 @@ class AddUlogaIdToKorisniciTable extends Migration
     public function up(): void
     {
         Schema::table('korisnici', function (Blueprint $table) {
-            $table->unsignedInteger('uloga_id')->nullable();
+            $table->unsignedInteger('uloga_id');
 
 
             $table->foreign('uloga_id')

@@ -78,7 +78,7 @@ export default {
     async demote(idKorisnika) {
       try {
         const authToken = document.cookie.replace(/(?:(?:^|.*;\s*)authToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-        const response = await axios.post('http://127.0.0.1:8000/api/adminukloni', { korisnik_id: idKorisnika }, {
+        const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/adminukloni', { korisnik_id: idKorisnika }, {
           headers: { Authorization: `Bearer ${authToken}` },
         });
         console.log(response.data);
@@ -96,7 +96,7 @@ export default {
     async izbrisi(idKorisnika) {
       try {
         const authToken = document.cookie.replace(/(?:(?:^|.*;\s*)authToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-        const response = await axios.post('http://127.0.0.1:8000/api/delkorisnik', { korisnik_id: idKorisnika }, {
+        const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/delkorisnik', { korisnik_id: idKorisnika }, {
           headers: { Authorization: `Bearer ${authToken}` },
         });
         console.log(response.data);
@@ -114,7 +114,7 @@ export default {
     async promoviraj(idKorisnika) {
       try {
         const authToken = document.cookie.replace(/(?:(?:^|.*;\s*)authToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
-        const response = await axios.post('http://127.0.0.1:8000/api/adminuloge', { korisnik_id: idKorisnika }, {
+        const response = await axios.post('http://pzi202024.studenti.sum.ba/backend/api/adminuloge', { korisnik_id: idKorisnika }, {
           headers: { Authorization: `Bearer ${authToken}` },
         });
         console.log(response.data);
@@ -142,9 +142,9 @@ export default {
       let url = '';
 
       if (this.vrstaKorisnika === 'Admin') {
-        url = 'http://localhost:8000/api/korisniciadmin';
+        url = 'http://pzi202024.studenti.sum.ba/backend/api/korisniciadmin';
       } else {
-        url = 'http://localhost:8000/api/korisnici';
+        url = 'http://pzi202024.studenti.sum.ba/backend/api/korisnici';
       }
 
       try {

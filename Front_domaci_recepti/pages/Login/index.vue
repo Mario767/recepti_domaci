@@ -75,8 +75,8 @@ export default {
       }
 
       try {
-        await fetch('http://localhost:8000/sanctum/csrf-cookie');
-        const response = await fetch('http://localhost:8000/api/prijavi', {
+        await fetch('http://pzi202024.studenti.sum.ba/backend/sanctum/csrf-cookie');
+        const response = await fetch('http://pzi202024.studenti.sum.ba/backend/api/prijavi', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -93,8 +93,8 @@ export default {
           document.cookie = `email=${data.korisnik.email}; path=/`;
           this.isLoggedIn = true;
           await nextTick();
-          if (data.korisnik.uloga_id == 2 || data.korisnik.uloga_id ) {
-            window.location.href = '/admin';
+          if (data.korisnik.uloga_id == 2 || data.korisnik.uloga_id == 3 ) {
+            window.location.href = '/Admin';
           } else {
             window.location.href = '/';
           }
