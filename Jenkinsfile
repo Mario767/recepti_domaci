@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_SERVER = '3.88.59.174'
+        APP_SERVER = '54.161.54.55'
         APP_USER = 'ubuntu'
         APP_DIR = '/var/www/recepti'
     }
