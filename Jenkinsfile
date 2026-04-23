@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_SERVER = '54.161.54.55'
+        APP_SERVER = '54.144.33.83'
         APP_USER = 'ubuntu'
         BACKEND_DIR = '/var/www/recepti'
         FRONTEND_DIR = '/var/www/frontend'
