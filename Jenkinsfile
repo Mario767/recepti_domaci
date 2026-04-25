@@ -3,7 +3,8 @@ pipeline {
     environment {
         APP_SERVER = '100.31.63.77'
         APP_USER = 'ubuntu'
-        APP_DIR = '/var/www/recepti'
+        BACKEND_DIR = '/var/www/recepti'
+        FRONTEND_DIR = '/var/www/frontend'
     }
     stages {
         stage('Checkout') {
@@ -12,10 +13,17 @@ pipeline {
                     url: 'https://github.com/Mario767/recepti_domaci.git'
             }
         }
-        stage('Build') {
+        stage('Build Backend') {
             steps {
                 dir('Backend_domacirecepti') {
                     sh 'composer install --no-interaction --prefer-dist'
+                }
+            }
+        }
+        stage('Build Frontend') {
+            steps {
+                dir('Front_domaci_recepti') {
+                    sh 'npm install --production'
                 }
             }
         }
@@ -31,11 +39,26 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['app-server-key']) {
-                    sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@100.31.63.77 "mkdir -p /var/www/recepti"
-                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" Backend_domacirecepti/ ubuntu@100.31.63.77:/var/www/recepti/
-                        ssh -o StrictHostKeyChecking=no ubuntu@100.31.63.77 "cd /var/www/recepti && composer install --no-interaction --prefer-dist && cp .env.example .env && php artisan key:generate && pkill -f artisan || true && nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &"
-                    '''
+                    sh """
+                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} 'mkdir -p ${BACKEND_DIR} ${FRONTEND_DIR}'
+                        
+                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
+                            Backend_domacirecepti/ ${APP_USER}@${APP_SERVER}:${BACKEND_DIR}/
+                        
+                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
+                            Front_domaci_recepti/ ${APP_USER}@${APP_SERVER}:${FRONTEND_DIR}/
+
+                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} '
+                            cd ${BACKEND_DIR} && composer install --no-interaction --prefer-dist
+                            cp .env.example .env && php artisan key:generate
+                            pkill -f "artisan serve" || true
+                            nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &
+                            
+                            cd ${FRONTEND_DIR} && npm install --production
+                            pkill -f "node" || true
+                            nohup node .output/server/index.mjs &> /tmp/frontend.log &
+                        '
+                    """
                 }
             }
         }
@@ -45,7 +68,7 @@ pipeline {
             echo 'Pipeline failed!'
         }
         success {
-            echo 'Deploy uspjesan!'
+            echo 'Deploy uspjesan! Backend: http://100.31.63.77:8000 Frontend: http://100.31.63.77:3000'
         }
     }
 }
