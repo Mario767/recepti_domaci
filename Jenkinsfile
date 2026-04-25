@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        APP_SERVER = '54.144.33.83'
+        APP_SERVER = '100.31.63.77'
         APP_USER = 'ubuntu'
         BACKEND_DIR = '/var/www/recepti'
         FRONTEND_DIR = '/var/www/frontend'
@@ -69,7 +69,7 @@ pipeline {
             echo 'Pipeline failed!'
         }
         success {
-            echo 'Deploy uspjesan! Backend: http://54.144.33.83:8000 Frontend: http://54.144.33.83:3000'
+            echo 'Deploy uspjesan! Backend: http://100.31.63.77:8000 Frontend: http://100.31.63.77:3000'
         }
     }
 }
