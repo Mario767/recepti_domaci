@@ -31,18 +31,21 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent(['app-server-key']) {
-                    sh """
-                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} 'mkdir -p ${APP_DIR}'
-                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
-                            Backend_domacirecepti/ ${APP_USER}@${APP_SERVER}:${APP_DIR}/
-                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} '
-                            cd ${APP_DIR}
-                            composer install --no-interaction --prefer-dist
-                            cp .env.example .env
-                            php artisan key:generate
-                            pkill -f "artisan serve" || true
-                            nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &
-                        '
-                    """
+                    sh '''
+                        ssh -o StrictHostKeyChecking=no ubuntu@100.31.63.77 "mkdir -p /var/www/recepti"
+                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" Backend_domacirecepti/ ubuntu@100.31.63.77:/var/www/recepti/
+                        ssh -o StrictHostKeyChecking=no ubuntu@100.31.63.77 "cd /var/www/recepti && composer install --no-interaction --prefer-dist && cp .env.example .env && php artisan key:generate && pkill -f artisan || true && nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &"
+                    '''
                 }
             }
+        }
+    }
+    post {
+        failure {
+            echo 'Pipeline failed!'
+        }
+        success {
+            echo 'Deploy uspjesan!'
+        }
+    }
+}
