@@ -1,13 +1,11 @@
 pipeline {
     agent any
-
     environment {
         APP_SERVER = '54.144.33.83'
         APP_USER = 'ubuntu'
         BACKEND_DIR = '/var/www/recepti'
         FRONTEND_DIR = '/var/www/frontend'
     }
-
     stages {
         stage('Checkout') {
             steps {
@@ -15,7 +13,6 @@ pipeline {
                     url: 'https://github.com/Mario767/recepti_domaci.git'
             }
         }
-
         stage('Build Backend') {
             steps {
                 dir('Backend_domacirecepti') {
@@ -23,16 +20,14 @@ pipeline {
                 }
             }
         }
-
         stage('Build Frontend') {
             steps {
                 dir('Front_domaci_recepti') {
                     sh 'npm install'
-                    sh 'npm run build'
+                    sh 'NODE_OPTIONS="--max-old-space-size=512" npm run build'
                 }
             }
         }
-
         stage('Test') {
             steps {
                 dir('Backend_domacirecepti') {
@@ -42,7 +37,6 @@ pipeline {
                 }
             }
         }
-
         stage('Deploy') {
             steps {
                 sshagent(['app-server-key']) {
@@ -63,20 +57,19 @@ pipeline {
                             
                             cd ${FRONTEND_DIR} && npm install
                             pkill -f "node" || true
-                            nohup npm run start &> /tmp/frontend.log & 
+                            nohup npm run start &> /tmp/frontend.log &
                         '
                     """
                 }
             }
         }
     }
-
     post {
         failure {
             echo 'Pipeline failed!'
         }
         success {
-            echo 'Deploy uspjesan! Backend: http://54.161.54.55:8000 Frontend: http://54.161.54.55:3000'
+            echo 'Deploy uspjesan! Backend: http://54.144.33.83:8000 Frontend: http://54.144.33.83:3000'
         }
     }
 }
