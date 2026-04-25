@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        APP_SERVER = '100.31.63.77'
+        APP_SERVER = '3.84.85.2'
         APP_USER = 'ubuntu'
         BACKEND_DIR = '/var/www/recepti'
         FRONTEND_DIR = '/var/www/frontend'
@@ -40,24 +40,11 @@ pipeline {
             steps {
                 sshagent(['app-server-key']) {
                     sh """
-                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} 'mkdir -p ${BACKEND_DIR} ${FRONTEND_DIR}'
-                        
-                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
-                            Backend_domacirecepti/ ${APP_USER}@${APP_SERVER}:${BACKEND_DIR}/
-                        
-                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" \
-                            Front_domaci_recepti/ ${APP_USER}@${APP_SERVER}:${FRONTEND_DIR}/
-
-                        ssh -o StrictHostKeyChecking=no ${APP_USER}@${APP_SERVER} '
-                            cd ${BACKEND_DIR} && composer install --no-interaction --prefer-dist
-                            cp .env.example .env && php artisan key:generate
-                            pkill -f "artisan serve" || true
-                            nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &
-                            
-                            cd ${FRONTEND_DIR} && npm install --production
-                            pkill -f "node" || true
-                            nohup node .output/server/index.mjs &> /tmp/frontend.log &
-                        '
+                        ssh -o StrictHostKeyChecking=no ubuntu@3.84.85.2 'mkdir -p /var/www/recepti /var/www/frontend'
+                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" Backend_domacirecepti/ ubuntu@3.84.85.2:/var/www/recepti/
+                        rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" Front_domaci_recepti/ ubuntu@3.84.85.2:/var/www/frontend/
+                        ssh -o StrictHostKeyChecking=no ubuntu@3.84.85.2 'cd /var/www/recepti && composer install --no-interaction --prefer-dist && cp .env.example .env && php artisan key:generate && pkill -f artisan || true && nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &'
+                        ssh -o StrictHostKeyChecking=no ubuntu@3.84.85.2 'cd /var/www/frontend && npm install --production && pkill -f node || true && nohup node .output/server/index.mjs &> /tmp/frontend.log &'
                     """
                 }
             }
@@ -68,7 +55,7 @@ pipeline {
             echo 'Pipeline failed!'
         }
         success {
-            echo 'Deploy uspjesan! Backend: http://100.31.63.77:8000 Frontend: http://100.31.63.77:3000'
+            echo 'Deploy uspjesan! Backend: http://3.84.85.2:8000 Frontend: http://3.84.85.2:3000'
         }
     }
 }
