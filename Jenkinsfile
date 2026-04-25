@@ -23,8 +23,7 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 dir('Front_domaci_recepti') {
-                    sh 'npm install'
-                    sh 'NODE_OPTIONS="--max-old-space-size=512" npm run build'
+                    sh 'npm install --production'
                 }
             }
         }
@@ -55,9 +54,9 @@ pipeline {
                             pkill -f "artisan serve" || true
                             nohup php artisan serve --host=0.0.0.0 --port=8000 &> /tmp/backend.log &
                             
-                            cd ${FRONTEND_DIR} && npm install
+                            cd ${FRONTEND_DIR} && npm install --production
                             pkill -f "node" || true
-                            nohup npm run start &> /tmp/frontend.log &
+                            nohup node .output/server/index.mjs &> /tmp/frontend.log &
                         '
                     """
                 }
